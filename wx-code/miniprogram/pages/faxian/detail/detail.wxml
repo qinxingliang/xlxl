@@ -1,0 +1,28 @@
+<import src="../../common/wxParse/wxParse.wxml"></import>
+<wxs src="../../../utils/wxs/date.wxs" module="util"></wxs>
+<gracePage customHeader="{{false}}" headerBG="#FFFFFF">
+    <view class="grace-body" slot="gBody">
+        <text class="grace-art-margin grace-art-title {{graceSkeleton?'grace-skeletons':''}}">{{article.cTitle}}</text>
+        <view class="middle-box">
+            <view>{{article.nLll}}浏览</view>
+            <view>{{zanCount}}点赞</view>
+            <view>{{util.formatDate(article.dtCreateTime)}}</view>
+        </view>
+        <view style="margin: 20rpx;" bindtap="previewImg">
+            <rich-text nodes="{{article.cContent}}" ></rich-text>
+        </view>
+
+        <view bindtap="zan" class="zan" data-id="{{article.cId}}" wx:if="{{!zan}}">
+            <image src="../../../images/prize.png" class="prize" ></image>
+        </view>
+        <view bindtap="zan2"  class="zan" data-id="{{article.cId}}" wx:if="{{zan}}">
+            <image src="../../../images/prize-yes.png" class="prize"></image>
+        </view>
+         <view class="face-box">
+            <block wx:for="{{faces}}">
+               <image src="{{item}}" class="face"></image>
+            </block>
+         </view>
+         <view style="height: 200rpx;"></view>
+    </view>
+</gracePage>

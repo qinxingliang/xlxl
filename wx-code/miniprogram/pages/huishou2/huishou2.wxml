@@ -1,0 +1,14 @@
+<block wx:for="{{list}}">
+  <view class="wrap">
+    <view>{{item.cName}}</view>
+    <view class="item-wrap">
+      <view>电话：{{item.cPhone}}</view>
+      <view class="but" bindtap="call" data-phone="{{item.cPhone}}">拨打</view>
+    </view>
+    <view class="item-wrap">
+      <view>微信：{{item.cWx}}</view>
+      <view  class="but" bindtap="copy" data-weixin="{{item.cWx}}">复制</view>
+    </view>
+    <view class="address">负责区域：{{item.cAddress}}</view>
+  </view>
+</block>

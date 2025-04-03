@@ -1,0 +1,72 @@
+.grace-pk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200806/24692285f85690abbc762512ce22d2c5.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: left center;
+    position: relative;
+}
+
+.grace-pk-item {
+    width: 750rpx;
+    overflow: hidden;
+    padding: 0rpx 35rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grace-pk-title {
+    display: block;
+    color: #FFFFFF;
+    font-size: 50rpx;
+    line-height: 60rpx;
+}
+
+.grace-pk-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32rpx;
+}
+
+.grace-pk-btn {
+    width: 150rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 22rpx;
+    border-radius: 100rpx;
+    color: #3687FF;
+}
+
+.grace-pk-btn-hv {
+    font-weight: bold;
+}
+
+.grace-pk-progress {
+    width: 200rpx;
+}
+
+.grace-pk-text {
+    font-size: 22rpx;
+    color: #FFFFFF;
+    line-height: 50rpx;
+    margin-top: 2px;
+}
+
+.grace-pk-icon {
+    width: 88rpx;
+    height: 88rpx;
+    background-color: #FFFFFF;
+    border-radius: 100rpx;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20rpx;
+}

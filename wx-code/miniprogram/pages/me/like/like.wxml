@@ -1,0 +1,20 @@
+
+<view class="container">
+    <gracePage customHeader="{{false}}">
+        <view class="grace-body" id="gBody" slot="gBody">
+          
+            <view  class="grace-news-list" wx:for="{{list}}" wx:key="index" bindtap="toDetail" data-id="{{item.cFaxianId}}">
+                <view class="big-img">
+                    <image class="big-image" src="{{item.article.cImgUrl}}"></image>
+                </view>
+                <text class="grace-news-title">{{item.article.cTitle}}</text>
+                <view class="middle-box">
+                  <view>{{item.article.nLll}}浏览</view>
+                  <view>{{item.zan}}点赞</view>
+                  <view>{{item.dtCreateTime}}</view>
+                </view>
+            </view>
+
+        </view>
+    </gracePage>
+</view>

@@ -1,0 +1,33 @@
+<view class="swiper-wrap">
+
+    <swiper class="swiper-box" indicator-dots='true' indicator-color='#fff' indicator-active-color="red" autoplay>
+        <block wx:for="{{product.cImgs}}">
+            <swiper-item>
+                <image class="swiper-img" src="{{item.url}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+
+<view class="title">{{product.cTitle}}</view>
+<view style="height: 20rpx;background-color: #ededed;"></view>
+<view class="box1">
+    <view class="jifen">积分 {{product.nJifen}}</view>
+    <view class="price">￥ {{product.dMarketPrice}}</view>
+</view>
+
+<view class="box2">
+    <view>库存：{{product.nStock}}</view>
+    <view>已售：{{product.nYishou}}件</view>
+    <view>浏览：{{product.nView}}次</view>
+
+</view>
+<view class="address" bindtap="openMap" data-res="{{product}}">领取地址：{{product.cDizhi}}</view>
+<view style="height: 20rpx;background-color: #ededed;"></view>
+<view class="title2">商品详情</view>
+<block wx:for="{{product.cImgList}}">
+    <image src="{{item.url}}" mode="widthFix" style="width: 97%;margin: 10rpx;"></image>
+</block>
+<view style="height: 200rpx;"></view>
+<view class="dui" bindtap="buyNow">立即兑换</view>

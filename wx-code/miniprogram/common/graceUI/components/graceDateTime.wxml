@@ -1,0 +1,32 @@
+<view>
+    <view catchtap="open">
+        <slot></slot>
+    </view>
+    <view catchtap="close" catchtouchmove="nomove" class="graceDateTime" style="background:{{background}};" wx:if="{{show}}"></view>
+    <view class="graceDateTime-body {{show?'gdIn':'gdOut'}}" style="padding-bottom:{{paddingBottom}}">
+        <view class="graceDateTime-header" wx:if="{{isHeaderBar}}">
+            <text catchtap="close" class="graceDateTime-header-btn" style="color:{{cancelTColor}}">{{cancelText}}</text>
+            <text catchtap="confirm" class="graceDateTime-header-btn" style="text-align:right; color:{{confirmColor}}">{{confirmText}}</text>
+        </view>
+        <picker-view bindchange="change" class="graceDateTime-main" style="height:{{height}}" value="{{defaultVal}}">
+            <picker-view-column>
+                <text class="graceDateTime-item" wx:for="{{sDate[0]}}" wx:key="index">{{item}}{{units[0]}}</text>
+            </picker-view-column>
+            <picker-view-column>
+                <text class="graceDateTime-item" wx:for="{{sDate[1]}}" wx:key="index">{{item}}{{units[1]}}</text>
+            </picker-view-column>
+            <picker-view-column>
+                <text class="graceDateTime-item" wx:for="{{sDate[2]}}" wx:key="index">{{item}}{{units[2]}}</text>
+            </picker-view-column>
+            <picker-view-column wx:if="{{isTime}}">
+                <text class="graceDateTime-item" wx:for="{{sDate[3]}}" wx:key="index">{{item}}{{units[3]}}</text>
+            </picker-view-column>
+            <picker-view-column wx:if="{{isTime}}">
+                <text class="graceDateTime-item" wx:for="{{sDate[4]}}" wx:key="index">{{item}}{{units[4]}}</text>
+            </picker-view-column>
+            <picker-view-column wx:if="{{isTime&&isSecond}}">
+                <text class="graceDateTime-item" wx:for="{{sDate[5]}}" wx:key="index">{{item}}{{units[5]}}</text>
+            </picker-view-column>
+        </picker-view>
+    </view>
+</view>

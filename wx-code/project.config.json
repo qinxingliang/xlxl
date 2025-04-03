@@ -1,0 +1,191 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "useStaticServer": true,
+    "ignoreUploadUnusedFiles": true,
+    "condition": false
+  },
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "分类",
+          "pathName": "pages/sort/sort",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "拍照页面",
+          "pathName": "pages/ai/camera/camera",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "搜索",
+          "pathName": "pages/ai/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "筛选",
+          "pathName": "pages/ai/filter/filter",
+          "query": "type=3",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "ai 搜索结果",
+          "pathName": "pages/result/gan",
+          "query": "keyword=花",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "未查询到的结果提交",
+          "pathName": "pages/result/commit",
+          "query": "keyword=花",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "小Q",
+          "pathName": "pages/android/qa",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "Ad",
+          "pathName": "pages/ad/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 9,
+          "name": "pages/video/video",
+          "pathName": "pages/video/video",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "page/four/index",
+          "pathName": "page/four/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "Game",
+          "pathName": "pages/game/game",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 13,
+          "name": "pages/examresult/examresult",
+          "pathName": "pages/examresult/examresult",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 14,
+          "name": "pages/note/note",
+          "pathName": "pages/note/note",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/exam/exam",
+          "pathName": "pages/exam/exam",
+          "query": "type=3",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "compileType": "miniprogram",
+  "srcMiniprogramRoot": "miniprogram/",
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "libVersion": "2.29.0",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wxfe20e1886344ba4b"
+}

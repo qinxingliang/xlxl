@@ -1,0 +1,74 @@
+.graceDateTimeBT {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+}
+
+.graceDateTimeBT-body {
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 999;
+    bottom: -1000px;
+    left: 0;
+    width: 100%;
+}
+
+.graceDateTimeBT-header {
+    padding: 25rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.graceDateTimeBT-header-btn {
+    width: 200rpx;
+    line-height: 38rpx;
+    height: 38rpx;
+    display: block;
+    font-size: 28rpx;
+}
+
+.graceDateTimeBT-text {
+    display: block;
+    box-sizing: border-box;
+    padding: 15rpx;
+    background-color: #FFFFFF;
+    width: 100%;
+    line-height: 60rpx;
+    height: 100rpx;
+    color: #666666;
+    font-size: 28rpx;
+}
+
+@keyframes gdIn {
+    from {
+        bottom: -1000px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.gdIn {
+    animation: gdIn 200ms ease-in forwards;
+}
+
+@keyframes gdOut {
+    from {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: -1000px;
+    }
+}
+
+.gdOut {
+    animation: gdOut 200ms ease-out forwards;
+}

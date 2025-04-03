@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "积分记录",
+  "usingComponents": {
+      "gracePage": "../../../common/graceUI/components/gracePage",
+      "graceLoading": "../../../common/graceUI/components/graceLoading",
+      "graceSegmentedControl": "../../../common/graceUI/components/graceSegmentedControl"
+  }
+}

@@ -1,0 +1,5 @@
+<view catchtap="closeShade" catchtouchmove="nottmove" class="grace-shade" style="z-index:{{zIndex}}; background:{{background}}; height:{{shadeShow?'100%':'0px'}}">
+    <view class="{{showInReal?'grace-shade-in':'grace-shade-out'}}">
+        <slot></slot>
+    </view>
+</view>

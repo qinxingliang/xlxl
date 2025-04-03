@@ -1,0 +1,64 @@
+<block wx:if="{{status==0}}">
+    <view class="top-box">
+        <view>题目{{tIndex+1}}</view>
+        <view>{{tIndex+1}} / 10</view>
+
+    </view>
+    <view class="title">{{examList[tIndex].cWtnr}}</view>
+    <view class="title2">属于以下哪种分类？</view>
+    <view class="box">
+        <view class="t1" bindtap="choose" data-index="0">可回收物</view>
+        <view class="t2" bindtap="choose" data-index="1">有害垃圾</view>
+        <view class="t3" bindtap="choose" data-index="2">厨余垃圾</view>
+        <view class="t4" bindtap="choose" data-index="3">其他垃圾</view>
+
+    </view>
+    <block wx:if="{{jie}}">
+        <view class="bottom-box">
+            <view class="bottom-title">{{examList[tIndex].title}}</view>
+            <view class="jiexi"><text class="cuo">{{answerList[linIndex]}}</text><text class="dui">{{answerList[examList[tIndex].nType]}}</text></view>
+
+        </view>
+        <view class="t5" bindtap="next">下一题</view>
+
+    </block>
+</block>
+<block wx:if="{{status==1}}">
+
+    <view class="status2-title1">获得<text class="num1">{{score}}</text>分</view>
+
+
+    <view class="status2-title2">
+        <block wx:if="{{score >= 100}} ">
+            获得【<text class="num2">{{score}}</text>】积分
+        </block>获得【<text class="chenghao">{{chenghao}}</text>】称号
+    </view>
+    <image src="../../images/jb.png" mode="widthFix" style="width: 300rpx;margin-left: 200rpx;margin-top: 30rpx;"></image>
+    <view class="status2-box1">
+        <view class="status2-box1-title">共计： <text class="num3">10</text>题</view>
+        <view class="status2-box1-title">答对： <text class="num3">{{dui}}</text>题</view>
+        <view class="status2-box1-title">答错： <text class="num3">{{cuo}}</text>题</view>
+
+    </view>
+    <view class="status2-box2">
+        <view class="status2-box2-but1" bindtap="che">再测一次</view>
+        <view class="status2-box2-but2" bindtap="chakan">查看答案</view>
+
+
+    </view>
+    <view wx:if="{{chakan}}">
+        <block wx:for="{{recordList}}">
+            <view class="record-box">
+                <view class="record-title">{{item.title}}</view>
+                <view class="record-box2">
+                    <view wx:if="{{item.score!=0}}" class="greenAn">{{item.myAnswer}}</view>
+                    <view wx:if="{{item.score==0}}" class="redAn">{{item.myAnswer}}</view>
+
+                    <view wx:if="{{item.score==0}}" class="greyAn">{{item.duiAnswer}}</view>
+                </view>
+            </view>
+
+
+        </block>
+    </view>
+</block>

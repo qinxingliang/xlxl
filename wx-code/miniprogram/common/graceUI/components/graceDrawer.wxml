@@ -1,0 +1,5 @@
+<view bindtap="closeDrawer" catchtouchmove="stopFun" class="grace-drawer-shade" style="background:{{background}}; z-index:{{zIndex}}; top:{{top+'px'}}; padding:{{padding}};" wx:if="{{show}}">
+    <scroll-view scrollY catchtap="stopFun" catchtouchmove="stopFun" class="nav {{direction=='left'?'gdSlideLeft':'gdSlideRight'}}" style="width:{{width}}; z-index:{{zIndex+1}}; background:{{slotBg}};">
+        <slot></slot>
+    </scroll-view>
+</view>

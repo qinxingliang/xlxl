@@ -1,0 +1,8 @@
+.title{
+    text-align: center;
+    margin: 20rpx;
+    font-size: 35rpx;
+}
+.text{
+    width: 90%;
+}

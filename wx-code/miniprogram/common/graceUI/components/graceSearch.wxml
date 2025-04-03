@@ -1,0 +1,6 @@
+<view class="gui-search" style="height:{{height}}; background:{{background}}; border-radius:{{borderRadius}};">
+    <view catchtap="tapme" class="gui-search-icon grace-icons icon-search" style="color:{{iconColor}}; font-size:{{iconFontSize}}; line-height:{{height}}; width:{{iconWidth}};"></view>
+    <input bindconfirm="confirm" bindinput="inputting" class="gui-search-input" confirmType="search" placeholder="{{placeholder}}" style="height:{{inputHeight}}; line-height:{{inputHeight}}; font-size:{{inputFontSize}}; background:{{background}}; color:{{inputColor}};" type="text" value="{{kwd}}" wx:if="{{!disabled}}"></input>
+    <view catchtap="tapme" class="gui-search-input" style="height:{{inputHeight}}; line-height:{{inputHeight}}; font-size:{{inputFontSize}}; background:{{background}}; color:{{iconColor}};" wx:if="{{disabled}}">{{placeholder}}</view>
+    <view catchtap="clearKwd" class="gui-search-icon grace-icons icon-close" style="color:{{iconColor}}; font-size:{{iconFontSize}}; line-height:{{height}}; width:{{iconWidth}};" wx:if="{{kwd!=''}}"></view>
+</view>

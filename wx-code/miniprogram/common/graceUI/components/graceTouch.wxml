@@ -1,0 +1,3 @@
+<view bindtap="tapmd" bindtouchend="touchend" bindtouchmove="touchmove" bindtouchstart="touchstart">
+    <slot></slot>
+</view>

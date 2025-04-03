@@ -1,0 +1,27 @@
+<view class="status2-title1">获得<text class="num1">{{record.nSocre}}</text>分</view>
+<view class="status2-title2"> 
+<block wx:if="{{ record.nSocre >= 100}}">
+    获得【<text class="num2">{{record.nSocre}}</text>】积分 
+</block>
+获得【<text class="chenghao">{{record.cChenghao}}</text>】称号</view>
+<image src="../../../../images/jb.png" mode="widthFix" style="width: 300rpx;margin-left: 200rpx;margin-top: 30rpx;"></image>
+<view class="status2-box1">
+    <view class="status2-box1-title">共计： <text class="num3">10</text>题</view>
+    <view class="status2-box1-title">答对： <text class="num3">{{record.nSuccess}}</text>题</view>
+    <view class="status2-box1-title">答错： <text class="num3">{{record.nError}}</text>题</view>
+
+</view>
+
+<block wx:for="{{record.cExamRecord}}">
+    <view class="record-box">
+        <view class="record-title">{{item.title}}</view>
+        <view class="record-box2">
+            <view wx:if="{{item.score!=0}}" class="greenAn">{{item.myAnswer}}</view>
+            <view wx:if="{{item.score==0}}" class="redAn">{{item.myAnswer}}</view>
+
+            <view wx:if="{{item.score==0}}" class="greyAn">{{item.duiAnswer}}</view>
+        </view>
+    </view>
+
+
+</block>

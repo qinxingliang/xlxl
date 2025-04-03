@@ -1,0 +1,9 @@
+<view catchtap="hideMenu" catchtouchmove="stopFun" class="grace-popup-mask" style="background:{{background}}; z-index:{{zIndex}};" wx:if="{{show}}"></view>
+<view class="grace-popup-menu {{show?'grace-shade-in':'grace-shade-out'}}" style="top:{{top+'px'}}; width:{{menuWidth}}; z-index:{{zIndex+1}};">
+    <view class="{{'arrow-d-'+arrowDirection}}" style="display:flex; flex-direction: row; flex-wrap:nowrap;" wx:if="{{isArrow}}">
+        <view class="arrow-up" style="border-bottom-color:{{bgColor}}; margin:{{arrowMargin}};"></view>
+    </view>
+    <view style="background:{{bgColor}}; width:{{menuWidth}}; border-radius:{{borderRadius}};">
+        <slot></slot>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+.graceRightMessage {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.graceRightMessageIcon {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.graceRightMessageContent {
+    width: 700rpx;
+}

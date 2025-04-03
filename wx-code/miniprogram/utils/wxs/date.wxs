@@ -1,0 +1,9 @@
+var formatDate = function (param) {
+        if(param){
+            return param.replace("T"," ");
+        }
+       return ""
+  }
+  module.exports = {
+    formatDate:formatDate
+  }

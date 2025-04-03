@@ -1,0 +1,80 @@
+<view class="search-wrap">
+  <view class="search-box">
+    <image src="../../../images/search_defaut.png" class="search-img"></image>
+
+    <input bindinput="getValue" bindconfirm="toSearch" value="{{inputValue}}" type="text" placeholder="请输入搜索关键词" class="input-cell" />
+
+  </view>
+</view>
+<view style="height: 20rpx;"></view>
+<view class="laji"  wx:if="{{!inputValue}}">
+  <view class="laji-left">
+    <!-- 彩色导航条 -->
+    <view class="laji-liebiao-left">
+      <view class="laji-liebiao-left0"></view>
+      <view class="laji-liebiao-left1"></view>
+      <view class="laji-liebiao-left2"></view>
+      <view class="laji-liebiao-left3"></view>
+    </view>
+    <!-- 左侧分类栏 -->
+    <view class="laji-liebiao">
+      <view bindtap="xuanzhong" wx:for="{{xuan}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" class="{{item.id==currentData.idx? currentData._laji_biao :'laji-biao'}}">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 内容区域 -->
+  <view class="laji-content">
+    <view class="{{currentData.content_bg_color}}">
+      <view class="content-img">
+        <image src="{{currentData.content_img}}"></image>
+      </view>
+      <view class="content-jieshi">
+        <text class="content-jieshi_text1">{{currentData.title}}</text>
+        <text class="content-jieshi_text2">{{currentData.gainian}}</text>
+      </view>
+
+      <view class="content-baokuo">
+        <view class="content-baokuo-top">
+          <text>{{currentData.baokuo}}</text>
+        </view>
+        <view class="content-baokuo-bottom">
+          <text>{{currentData.baokuo_content}}</text>
+        </view>
+        <view class="content-baokuo-top">
+          <text>{{currentData.yaoqiu}}</text>
+        </view>
+        <view class="content-baokuo-bottom1">
+          <text>{{currentData.yaoqiu_content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="filter-view" wx:for="{{datas}}" wx:key wx:if="{{!inputValue}}">
+  <view class="item-view item-o bg-white" wx:if="{{index%2==0}}">
+    <image class="img" src='{{logo}}'></image>
+    <text>{{item.cName}}</text>
+
+  </view>
+  <view class="item-view item-ji bg-grey" wx:else>
+    <image class="img" src='{{logo}}'></image>
+    <text>{{item.cName}}</text>
+  </view>
+  <view class="type" style="background-color: {{colorList[currentData.idx]}};">{{currentData.title}}</view>
+</view>
+
+<view class="filter-view" wx:for="{{allList}}" wx:key wx:if="{{inputValue}}" style="margin-top: 00rpx;">
+  <view class="item-view item-o bg-white" wx:if="{{index%2==0}}">
+    <image class="img" src='{{logo}}'></image>
+    <text>{{item.cName}}</text>
+  </view>
+  <view class="item-view item-ji bg-grey" wx:else>
+    <image class="img" src='{{logo}}'></image>
+    <text>{{item.cName}}</text>
+  </view>
+  <view class="type" style="background-color: {{colorList[item.sortId-1]}};">{{xuan[item.sortId-1].name}}</view>
+
+</view>
+
+
+<!-- <view class="tishi" bindtap="showDialog">温馨提示</view> -->

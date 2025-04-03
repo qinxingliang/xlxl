@@ -1,0 +1,12 @@
+<view class="select-list">
+    <view catchtap="choose" class="select-list-item" data-index="{{index}}" wx:for="{{lists}}" wx:key="index">
+        <image class="select-list-img" mode="widthFix" src="{{item.img}}" style="width:{{imgSize[0]}}; height:{{imgSize[1]}}; border-radius:{{imgBorderRadius}};" wx:if="{{item.img}}"></image>
+        <view class="select-list-body {{isBorder?'grace-border-b':''}}" style="border-color:{{borderColor}};">
+            <view class="select-list-content">
+                <text style="font-size:{{fontSize}}; line-height:{{lineHeight}}; color:{{itemColor}}; display:block; width:100%;">{{item.title}}</text>
+                <text class="select-list-desc" wx:if="{{item.desc}}">{{item.desc}}</text>
+            </view>
+            <view class="select-list-icon select-list-icon icon-right" style="color:{{item.checked?checkColor:'#A5A7B2'}};" wx:if="{{item.checked}}"></view>
+        </view>
+    </view>
+</view>

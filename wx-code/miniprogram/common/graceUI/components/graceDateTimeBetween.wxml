@@ -1,0 +1,24 @@
+<view>
+    <view catchtap="open">
+        <slot></slot>
+    </view>
+    <view catchtap="close" catchtouchmove="nomove" class="graceDateTimeBT" style="background:{{background}}" wx:if="{{show}}"></view>
+    <view catchtouchmove="nomove" class="graceDateTimeBT-body {{show?'gdIn':'gdOut'}}" style="paddingBottom:{{paddingBottom}};">
+        <view class="graceDateTimeBT-header grace-space-between">
+            <text catchtap="close" class="graceDateTimeBT-header-btn" style="color:{{cancelTColor}};">{{cancelText}}</text>
+            <text catchtap="confirm" class="graceDateTimeBT-header-btn" style="text-align:right; color:{{confirmColor}};">{{confirmText}}</text>
+        </view>
+        <view>
+            <text class="graceDateTimeBT-text">{{titles[0]}}</text>
+        </view>
+        <view>
+            <graceDateTimeBetweenBase bind:change="chang1" endYear="{{endYear}}" isSecond="{{isSecond}}" isTime="{{isTime}}" startYear="{{startYear}}" units="{{units}}" value="{{startValue}}"></graceDateTimeBetweenBase>
+        </view>
+        <view>
+            <text class="graceDateTimeBT-text">{{titles[1]}}</text>
+        </view>
+        <view>
+            <graceDateTimeBetweenBase bind:change="chang2" endYear="{{endYear}}" isSecond="{{isSecond}}" isTime="{{isTime}}" startYear="{{startYear}}" units="{{units}}" value="{{endValue}}"></graceDateTimeBetweenBase>
+        </view>
+    </view>
+</view>

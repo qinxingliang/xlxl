@@ -1,0 +1,106 @@
+<view class="page">
+  <!-- 头像信息 -->
+  <scroll-view scrollY class="scrollPage">
+    <view class="UCenter-bg">
+      <view>
+        <view bindtap="toScoreHistory" class="jifen" wx:if="{{userInfo}}">
+          <image src="../../images/jifen.png" class="jifen-img" style="width: 50rpx;height: 50rpx;"></image>
+          <text>{{user.cScore ? user.cScore : 0}}</text>
+        </view>
+        <image class="png" mode="widthFix" wx:if="{{userInfo!=null}}" src="{{user.cIcon}}" bindtap="toUserInfo"></image>
+        <view class="margin-top-sm nick_name" bindtap="toUserInfo" wx:if="{{userInfo!=null}}">
+          <text>{{user.cNickName}}</text>
+        </view>
+        <view bindtap="qiandao" class="qiandao" wx:if="{{userInfo}}">
+          <view style="text-align: center;" class="qian">
+            签
+          </view>
+        </view>
+      </view>
+      <button bindgetuserinfo="getUserProfile" class="info login" openType="getUserInfo" wx:if="{{!userInfo}}">
+        <image class="png" mode="widthFix" src="../../images/user.png"></image>
+        <view class="margin-top-sm nick_name">
+        </view>
+      </button>
+    </view>
+  </scroll-view>
+  <button open-type="getUserInfo" bindtap="getUserProfile" class="btn" wx:if="{{!userInfo}}">授权登录</button>
+
+  <view class="split"></view>
+  <view wx:if="{{userInfo!=null}}">
+    <view style="display: flex;flex-direction: row;">
+
+      <view class="box" bindtap="toSbRecord">
+        <image src="../../images/tt1.png" class="image"></image>
+        <view class="title">识别记录</view>
+
+      </view>
+
+      <view class="box" bindtap="toHistory">
+        <image src="/images/tt3.png" class="image"></image>
+        <view class="title">考试记录</view>
+
+      </view>
+      <view class="box" bindtap="toMyLike">
+        <image src="/images/tt4.png" class="image"></image>
+        <view class="title">我的喜欢</view>
+
+      </view>
+      <view class="box" bindtap="toScoreHistory">
+        <image src="/images/tt5.png" class="image"></image>
+        <view class="title">积分记录</view>
+
+      </view>
+
+    </view>
+    <view style="display: flex;flex-direction: row;">
+
+      <view class="box" bindtap="toDuiHuan">
+        <image src="../../images/tt6.png" class="image"></image>
+        <view class="title">积分兑换</view>
+
+      </view>
+
+      <view class="box" bindtap="toInfo1">
+        <image src="/images/tt7.png" class="image"></image>
+        <view class="title">积分说明</view>
+
+      </view>
+      <view class="box" bindtap="toInfo2">
+        <image src="/images/tt9.png" class="image"></image>
+        <view class="title">关于我们</view>
+
+      </view>
+      <view class="box" bindtap="logOff">
+        <button openType="contact">
+          <image src="/images/tt10.png" class="image"></image>
+        </button>
+        <view class="title" style="margin-top: -25rpx;">联系客服</view>
+
+
+      </view>
+
+    </view>
+    <view style="display: flex;flex-direction: row;">
+
+      <view class="box" bindtap="loginOut">
+        <image src="../../images/tt11.png" class="image"></image>
+        <view class="title">退出登录</view>
+
+      </view>
+
+
+    </view>
+  </view>
+
+
+
+
+
+
+</view>
+
+<view class="logo-box">
+    <image src="../../images/logo.jpg" class="logo"></image>
+    <view style="color: grey;">垃圾分类</view>
+  </view>

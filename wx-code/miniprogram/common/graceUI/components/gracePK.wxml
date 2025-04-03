@@ -1,0 +1,25 @@
+<view class="grace-pk" style="height:{{height}}; border-radius:{{borderRadius}};">
+    <view class="grace-pk-item">
+        <text class="grace-pk-title">{{title[0]}}</text>
+        <view class="grace-pk-btn-wrap" wx:if="{{status=='button'}}">
+            <view bindtap="choose" class="grace-pk-btn" data-index="left" hoverClass="grace-pk-btn-hv">{{btnName}}</view>
+        </view>
+        <view class="grace-pk-btn-wrap" wx:if="{{status=='progress'}}">
+            <progress active activeColor="#FFFFFF" backgroundColor="#3699ff" borderRadius="10" class="grace-pk-progress" percent="{{progress[0]}}" strokeWidth="3"></progress>
+        </view>
+        <view class="grace-pk-text" wx:if="{{status=='progress'}}">{{progress[2]}}</view>
+    </view>
+    <view class="grace-pk-item">
+        <text class="grace-pk-title" style="text-align:right;">{{title[1]}}</text>
+        <view class="grace-pk-btn-wrap" style="justify-content:flex-end;" wx:if="{{status=='button'}}">
+            <view bindtap="choose" class="grace-pk-btn" data-index="right" hoverClass="grace-pk-btn-hv" style="color:#FF0036;">{{btnName}}</view>
+        </view>
+        <view class="grace-pk-btn-wrap" style="justify-content:flex-end;" wx:if="{{status=='progress'}}">
+            <progress active activeColor="#FFFFFF" backgroundColor="#FF6666" borderRadius="10" class="grace-pk-progress" percent="{{progress[1]}}" strokeWidth="3"></progress>
+        </view>
+        <view class="grace-pk-text" style="text-align:right;" wx:if="{{status=='progress'}}">{{progress[3]}}</view>
+    </view>
+    <view class="grace-pk-icon">
+        <image mode="widthFix" src="https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200806/84515c21a39e8382addbeca53462e3a0.png" style="width:88rpx; height:88rpx;"></image>
+    </view>
+</view>

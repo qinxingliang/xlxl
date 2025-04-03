@@ -1,0 +1,26 @@
+<view class="check-list" style="height:{{height+'px'}}">
+    <scroll-view scrollY="{{true}}" style="height:{{height+'px'}}">
+        <view catchtap="choose" class="check-list-item" data-index="{{index}}" wx:for="{{lists}}" wx:key="index">
+            <view class="check-list-icon grace-icons check-list-icon-checked" style="color:{{checkColor}}" wx:if="{{item.checked&&batch}}"></view>
+            <view class="check-list-icon grace-icons check-list-icon-checkbox" style="color:#D2D2D2;" wx:if="{{!item.checked&&batch}}"></view>
+            <view class="check-list-body {{isBorder&&index<lists.length-1?'grace-border-b':''}}">
+                <image class="check-list-img" mode="widthFix" src="{{item.img}}" style="width:{{imgSize[0]}}; height:{{imgSize[1]}}; border-radius:{{imgBordeRadius}};" wx:if="{{item.img}}"></image>
+                <view class="check-list-content">
+                    <text class="check-list-content-title" style="font-size:{{fontSize}}; color:{{itemColor}};">{{item.title}}</text>
+                    <text class="check-list-content-desc" style="color:{{smallTextColor}}; font-size:{{smallTextSize}};">{{item.desc}}</text>
+                </view>
+            </view>
+        </view>
+        <view style="height:120rpx; width:100%;" wx:if="{{batch}}"></view>
+    </scroll-view>
+    <view class="check-list-footer" wx:if="{{height>0&&batch}}">
+        <view catchtap="selectAll" class="check-list-icon">
+            <text class="grace-icons check-list-icon-checked" style="color:{{checkColor}}" wx:if="{{sedAll}}"></text>
+            <text class="grace-icons check-list-icon-checkbox" wx:if="{{!sedAll}}"></text>
+        </view>
+        <view catchtap="selectAll" class="check-list-footer-text">全选 {{sedNumbers>0?sedNumbers+'/'+lists.length:''}}</view>
+        <view class="check-list-footer-btns">
+            <slot></slot>
+        </view>
+    </view>
+</view>

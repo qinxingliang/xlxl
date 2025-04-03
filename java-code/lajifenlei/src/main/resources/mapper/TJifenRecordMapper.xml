@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.mapper.TJifenRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="project.entity.TJifenRecord">
+        <id column="c_id" property="cId" />
+        <result column="c_open_id" property="cOpenId" />
+        <result column="n_type" property="nType" />
+        <result column="c_bg_name" property="cBgName" />
+        <result column="n_jifen" property="nJifen" />
+        <result column="dt_create_time" property="dtCreateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        c_id, c_open_id, n_type, c_bg_name, n_jifen, dt_create_time
+    </sql>
+
+</mapper>

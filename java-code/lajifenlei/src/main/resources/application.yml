@@ -1,0 +1,42 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 150MB
+      max-request-size: 150MB
+  datasource:
+    url: jdbc:mysql://git.qiufengluoyue.cn:3306/lajifenlei?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true
+    username: root
+    password: jiarui19971224.
+
+
+mybatis-plus:
+  # xml文件位置
+  mapper-locations: classpath:mapper/*.xml
+  #MP日志
+  configuration:
+    #标准输出，即打印到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#云存储相关配置
+cos:
+  secret-id: AKIDyTko21AKejZCZngY7VeeQxMgohMpNHaH
+  secret-key: vfAQVWNAnEQQGvPisoX7UhiW6cv0pSt8
+  #存储桶名称
+  name: cos-1256088358
+  #存储桶地域
+  region: ap-beijing
+
+# 微信小程序
+wx:
+  base-url: https://api.weixin.qq.com/
+  # AppID(小程序ID)
+  app-id: wxfe20e1886344ba4b
+  # AppSecret(小程序密钥)
+  app-secret: 48d24d439086964a461eacc0b7cef278
+
+# 百度云相关
+baidu:
+  api-key: wo6Cxj5Rnb5KBzNTwuw6fNzP
+  secret-key: hLLQp9Ydz1iSNESM7B9Yu1GSz0kvozjN

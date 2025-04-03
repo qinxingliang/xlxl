@@ -1,0 +1,20 @@
+<wxs src="../../utils/wxs/date.wxs" module="util"></wxs>
+<view class="container">
+    <gracePage customHeader="{{false}}">
+        <view class="grace-body" id="gBody" slot="gBody">
+          
+            <view  class="grace-news-list"  wx:for="{{allList}}" wx:key="index" bindtap="toDetail" data-id="{{item.cId}}">
+                <view class="big-img">
+                    <image class="big-image" src="{{item.cImgUrl}}"></image>
+                </view>
+                <text class="grace-news-title">{{item.cTitle}}</text>
+                <view class="middle-box">
+                  <view>{{item.nLll}}浏览</view>
+                  <view>{{item.number}}点赞</view>
+                  <view>{{util.formatDate(item.dtCreateTime)}}</view>
+                </view>
+            </view>
+            <graceLoading loadingType="{{loadingType}}"></graceLoading>
+        </view>
+    </gracePage>
+</view>

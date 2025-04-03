@@ -1,0 +1,19 @@
+.grace-tree {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.grace-tree-label {
+    display: block;
+}
+
+.grace-tree-icons {
+    padding-right: 16rpx;
+}
+
+.grace-tree-icons-text {
+    font-size: 22rpx;
+    color: #828282;
+}

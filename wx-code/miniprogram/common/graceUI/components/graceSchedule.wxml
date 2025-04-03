@@ -1,0 +1,30 @@
+<view class="grace-schedule-wrap">
+    <view class="grace-schedule-header grace-space-between grace-flex-vcenter">
+        <picker bindchange="selectDate" class="grace-flex-center grace-flex-vcenter" end="{{endDate}}" mode="date" start="{{startDate}}" value="{{currentDayIn}}">
+            <text class="grace-schedule-header-date grace-icons icon-down">{{cYear}} 年 {{cMonthStr}} 月</text>
+        </picker>
+        <view catchtap="gotoToday" class="grace-schedule-today">返回今天</view>
+    </view>
+    <view class="grace-date-week">
+        <text class="grace-date-weeks" wx:for="{{weeks}}" wx:key="index">{{item}}</text>
+    </view>
+    <view class="grace-date-days">
+        <block wx:for="{{days}}" wx:key="index">
+            <view catchtap="chooseDate" class="grace-date-ditems" data-cdate="{{cYear+'-'+cMonthStr+'-'+item.date}}" style="background:{{currentDayIn==cYear+'-'+cMonthStr+'-'+item.date?activeBgColor:bgColor}};" wx:if="{{item!=''}}">
+                <text class="{{currentDayIn==cYear+'-'+cMonthStr+'-'+item.date?'grace-d-current-txt':''}}">{{item.date}}</text>
+                <text class="grace-date-nl {{currentDayIn==cYear+'-'+cMonthStr+'-'+item.date?'grace-d-current-txt':''}}" vIf="isLunar">{{item.nl}}</text>
+                <view class="grace-schedule-point" style="background-color:{{pointColor}};" wx:if="{{item.haveSe}}"></view>
+            </view>
+            <view class="grace-date-ditems" style="background-color:none;" wx:else></view>
+        </block>
+    </view>
+    <view class="grace-schedule-line"></view>
+    <view class="grace-schedule-time-list-wrap">
+        <view class="grace-schedule-time-list" wx:for="{{hours}}" wx:key="index">
+            <text class="grace-schedule-timer">{{item}}:00</text>
+            <view class="grace-schedule-body">
+                <view catchtap="scheduleTap" class="grace-schedules" data-id="{{schedule.id}}" style="background:{{schedule.bgColor}}; color:{{schedule.color}};" wx:for="{{schedulesIn[index]}}" wx:for-index="idx" wx:for-item="schedule" wx:key="idx">{{schedule.content}}</view>
+            </view>
+        </view>
+    </view>
+</view>

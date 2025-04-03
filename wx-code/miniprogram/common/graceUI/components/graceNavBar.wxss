@@ -1,0 +1,44 @@
+.grace-nav-bar {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+}
+
+.nav-item {
+    width: 100rpx;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.nav-item-title {
+    width: 100%;
+    color: #333333;
+}
+
+.nav-active-line-wrap {
+    display: flex;
+}
+
+.nav-active-line {
+    margin-top: 5rpx;
+    border-radius: 10rpx;
+}
+
+.grace-nav-center {
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes grace-nav-scale {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.grace-nav-scale {
+    animation: grace-nav-scale 300ms forwards;
+}

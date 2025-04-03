@@ -1,0 +1,20 @@
+<graceBottomDialog bind:closeDialog="hide" id="graceBottomDialog">
+    <view slot="content" style="padding:20rpx 0;">
+        <view class="grace-comments">
+            <view class="grace-comments-at" wx:if="{{comment.at!=''}}">@ {{comment.at}}</view>
+            <view style="display:flex; flex-direction:row;">
+                <view class="grace-comments-img" wx:if="{{comment.img!=''}}">
+                    <image class="grace-comments-img-in" mode="widthFix" src="{{comment.img}}"></image>
+                    <view bindtap="removeImg" class="grace-comments-img-remove grace-icons icon-close2"></view>
+                </view>
+                <textarea bindinput="contentInput" class="grace-comments-textarea" cursorSpacing="200" placeholder="{{placeholder}}" showConfirmBar="{{false}}" value="{{comment.content}}"></textarea>
+            </view>
+        </view>
+        <view class="grace-comments-btn">
+            <view>
+                <view bindtap="selectImg" class="grace-comments-btns grace-icons icon-img" wx:if="{{isImg}}"></view>
+            </view>
+            <view bindtap="submit" class="grace-comments-btns grace-comments-submit grace-icons ">提交</view>
+        </view>
+    </view>
+</graceBottomDialog>

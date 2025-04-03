@@ -1,0 +1,199 @@
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.t1{
+    text-align: center;
+    background-color: rgb(13,164,8);
+    margin: 30rpx;
+    color: white;
+    padding: 20rpx 20rpx;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+}
+.t2{
+    text-align: center;
+    background-color: rgb(255,0,54);
+    margin: 30rpx;
+    color: white;
+    padding: 20rpx 20rpx;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+}.t3{
+    text-align: center;
+    background-color: rgb(157,210,109);
+    margin: 30rpx;
+    color: white;
+    padding: 20rpx 20rpx;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+}.t4{
+    text-align: center;
+    background-color: rgb(0,0,0);
+    margin: 30rpx;
+    color: white;
+    padding: 20rpx 20rpx;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+}
+.t5{
+    text-align: center;
+    background-color: rgb(115,193,71);
+    margin: 30rpx;
+    color: white;
+    padding: 20rpx 20rpx;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+}
+.top-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin:20rpx 40rpx ;
+    font-size: 38rpx;
+}
+.title{
+    text-align: center;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.title2{
+    text-align: center;
+
+}
+.bottom-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30rpx;
+}
+.bottom-title{
+    font-weight: bold;
+
+}
+.cuo{
+    color: red;
+    text-decoration: line-through;
+}
+.dui{
+    margin-left: 20rpx;
+    color: grey;
+}
+
+.status2-title1{
+    text-align: center;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.num1{
+    color: rgb(243,123,29);
+    font-size: 80rpx;
+    margin: 0 10rpx;
+    font-weight: bold;
+}
+.status2-title2{
+    text-align: center;
+    font-size: 40rpx;
+}
+.num2{
+    color: rgb(243,123,29);
+    margin: 0 10rpx;
+
+}
+.chenghao{
+    color: rgb(243,123,29);
+}
+.status2-box1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30rpx;
+}
+.status2-box1-title{
+    font-size: 35rpx; 
+    color: grey;
+}
+.num3{
+    color: rgb(231,89,79);
+    margin: 0 10rpx;
+    font-weight: bold;
+    font-size: 40rpx;
+
+}
+.status2-box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.status2-box2-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30rpx;
+    width: 600rpx;
+}
+.status2-box2-but1{
+    color: white;
+    background-color:  rgb(250,173,20);
+    width: 600rpx;
+    text-align: center;
+    padding: 20rpx 0;
+    border-radius: 10rpx;
+}
+.status2-box2-but2{
+    color: white;
+    background-color:  rgb(97,203,239);
+    width: 280rpx;
+    text-align: center;
+    padding: 20rpx 0;
+    border-radius: 10rpx;
+}
+.status2-box2-but3{
+    color: white;
+    background-color:  rgb(255,104,109);
+    width: 280rpx;
+    text-align: center;
+    padding: 20rpx 0;
+    border-radius: 10rpx;   
+}
+.record-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:10rpx  30rpx ;
+}
+.record-box2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:10rpx  30rpx ;
+}
+.record-title{
+    font-weight: bold;
+    font-size: 30rpx;
+}
+.greenAn{
+    color: rgb(114,181,74);
+    margin-left: 20rpx;
+    margin-right: 130rpx;
+}
+.redAn{
+    color: red;
+    text-decoration: line-through;
+    margin-left: 20rpx;
+
+}
+.greyAn{
+    color:grey;
+    margin-left: 20rpx;
+
+}

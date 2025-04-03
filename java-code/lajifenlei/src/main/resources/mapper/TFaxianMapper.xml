@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.mapper.TFaxianMapper">
+
+    <select id="getAll" resultType="project.entity.TFaxian">
+        SELECT
+            faxian.c_id as cId,
+            faxian.c_title as cTitle,
+            faxian.c_img_url as cImgUrl,
+            faxian.n_lll as nLll,
+            faxian.c_content as cContent,
+            faxian.dt_create_time as dtCreateTime,
+            COUNT(dianzan.c_id) as number
+        from
+            t_faxian as faxian
+        left join
+            t_dianzan as dianzan
+        on
+            faxian.c_id = dianzan.c_faxian_id
+        group by
+            faxian.c_id,
+            faxian.c_title,
+            faxian.c_img_url,
+            faxian.n_lll,
+            faxian.c_content,
+            faxian.dt_create_time
+        order by
+            faxian.dt_create_time desc
+    </select>
+
+
+</mapper>

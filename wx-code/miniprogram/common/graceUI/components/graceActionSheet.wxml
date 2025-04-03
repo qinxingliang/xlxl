@@ -1,0 +1,8 @@
+<view catchtap="closeByShade" catchtouchmove="stopFun" class="graceActionSheet" style="background:{{background}}; z-index:{{zIndex}}; width:{{realShow?'750rpx':'0rpx'}};"></view>
+<view catchtap="stopFun" class="graceActionSheetBody {{isIpx&&!isSwitchPage?'grace-ipx-bottom':''}} {{realShow?'grace-shade-in':''}}" style="width:{{realShow?width:'0rpx'}}; left:{{left}}; border-top-left-radius:{{borderRadius}}; border-top-right-radius:{{borderRadius}}; z-index:{{zIndex+1}}">
+    <view class="graceActionSheetTitle" style="color:{{titleColor}};">{{title}}</view>
+    <scroll-view scrollY style="height:{{height}};">
+        <view catchtap="selected" catchtouchmove="stopFun" class="graceActionSheetList" data-index="{{index}}" style="color:{{listColor}}; line-height:{{listLineHeight}}; font-size:{{listFontSize}};" wx:for="{{items}}" wx:key="index">{{item}}</view>
+    </scroll-view>
+    <view catchtap="cancel" class="graceActionSheetList" style="border:none; color:{{cancelBtnColor}};" wx:if="{{isCancelBtn}}">{{cancelBtnName}}</view>
+</view>

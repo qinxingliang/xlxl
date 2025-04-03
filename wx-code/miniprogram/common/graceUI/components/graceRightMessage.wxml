@@ -1,0 +1,8 @@
+<view class="graceRightMessage" style="z-index:{{zIndex}}; bottom:{{bottom}}; background:{{background}}; width:{{status==1?width:minWidth}}; height:{{height}}; border-top-left-radius:{{height}}; border-bottom-left-radius:{{height}};" wx:if="{{showIn}}">
+    <view class="graceRightMessageIcon">
+        <slot name="icon"></slot>
+    </view>
+    <view class="graceRightMessageContent">
+        <slot name="content"></slot>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<wxs src="../../../utils/wxs/date.wxs" module="util"></wxs>
+<view style="height: 1000rpx;background-color: #ededed;">
+  <gracePage customHeader="{{false}}">
+    <view class="grace-body grace-flex-v1" id="gBody" slot="gBody">
+      <view class="nav">
+        <graceNav activeColor="#0da408" activeDirection="center" activeFontSize="32rpx" activeLineBg="#0da408" bind:change="navChange" currentIndex="{{navIndex}}" fontSize="30" isCenter="true" items="{{navItems}}" margin="25rpx" padding="25rpx" size="180"></graceNav>
+      </view>
+
+    </view>
+  </gracePage>
+  <block wx:for="{{allList}}">
+    <view class="box" bindtap="toDetail" data-id="{{item.cId}}">
+      <view class="time">考试时间：{{util.formatDate(item.dtCreateTime)}}</view>
+      <view class="box1">
+        <view>分数：{{item.nSocre}}</view>
+        <view>对：{{item.nSuccess}}</view>
+        <view>错：{{item.nError}}</view>
+      </view>
+    </view>
+  </block>
+
+</view>

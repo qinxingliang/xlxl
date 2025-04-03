@@ -1,0 +1,16 @@
+<wxs src="../../../utils/wxs/date.wxs" module="md"></wxs>
+<view class="grace-flex-v1" id="gBody" slot="gBody">
+  <view class="SegmentedControlIn">
+    <graceSegmentedControl bind:change="change" current="{{current}}" items="{{cates}}"></graceSegmentedControl>
+  </view>
+  <block wx:for="{{jifenlog}}">
+    <view class="box" wx:if="{{current == 0 || current == item.nType + 1}}">
+      <view class="box1">
+        <view class="type">{{ item.cBgName}}</view>
+        <view class="jifen">积分：{{item.nType==0?'+':'-'}}{{item.nJifen}}</view>
+      </view>
+      <view class="time">{{md.formatDate(item.dtCreateTime) }}</view>
+    </view>
+  </block>
+
+</view>

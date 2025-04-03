@@ -1,0 +1,20 @@
+<view wx:for="{{treesIN}}" wx:for-item="tree" wx:key="index">
+    <view catchtap="taped" class="grace-tree" data-cancheck="{{allCanCheck||!tree.children}}" data-havsons="{{tree.children}}" data-index="{{index}}" data-treeindexs="{{indexesIn}}" data-treelevel="{{level}}" style="padding-left:{{indent*level+'rpx'}};">
+        <view class="grace-tree-icons" style="width:22rpx;" wx:if="{{type=='text'&&isIcon}}">
+            <text class="grace-tree-icons-text grace-icons icon-line" wx:if="{{tree.children}}"></text>
+        </view>
+        <view class="grace-tree-icons" wx:if="{{type=='radio'&&(allCanCheck||!tree.children)}}">
+            <text class="grace-tree-icons-text grace-icons icon-radio-ckd" style="color:{{checkedColor}}; font-size:{{iconSize}};" wx:if="{{tree.id==checkedId}}"></text>
+            <text class="grace-tree-icons-text grace-icons icon-radio" style="font-size:{{iconSize}};" wx:else></text>
+        </view>
+        <view class="grace-tree-icons" wx:if="{{type=='checkbox'&&(allCanCheck||!tree.children)}}">
+            <text class="grace-tree-icons-text grace-icons icon-checkbox-ckd" style="color:{{checkedColor}}; font-size:{{iconSize}};" wx:if="{{tools.isChecked(checkedIds,tree.id)}}"></text>
+            <text class="grace-tree-icons-text grace-icons icon-checkbox" style="font-size:{{iconSize}};" wx:else></text>
+        </view>
+        <text class="grace-tree-label" style="line-height:{{lineHeight}}; font-size:{{fontSize}}; color:{{fontColor}};">{{tree.label}}</text>
+    </view>
+    <view>
+        <graceTree allCanCheck="{{allCanCheck}}" bind:taped="tapbase" checkedId="{{checkedId}}" checkedIds="{{checkedIds}}" fontColor="{{fontColor}}" fontSize="{{fontSize}}" iconSize="{{iconSize}}" indent="{{indent}}" indexes="{{[indexesIn,index]}}" isIcon="{{isIcon}}" level="{{level+1}}" lineHeight="{{lineHeight}}" trees="{{tree.children}}" type="{{type}}" wx:if="{{!fold}}"></graceTree>
+    </view>
+</view>
+<wxs module="tools" src="graceTree.wxs" />

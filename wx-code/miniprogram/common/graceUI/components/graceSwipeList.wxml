@@ -1,0 +1,24 @@
+<view class="grace-swipe-list" style="width:{{width+'rpx'}};">
+    <view class="grace-swipe-list-item" style="width:{{width+'rpx'}};" wx:for="{{msgsIn}}" wx:key="index">
+        <view class="grace-swipe-list-item-body" style="width:{{width+'rpx'}}; margin-left:{{(moveIndex!=index?0:x*-1)+'px'}}">
+            <view bindtap="itemTap" class="grace-swipe-list-img" data-index="{{index}}" style="width:{{imgSize[0]}}; height:{{imgSize[1]}};">
+                <image mode="widthFix" src="{{item.img}}" style="width:{{imgSize[0]}}; height:{{imgSize[1]}}; border-radius:6rpx;"></image>
+                <view class="grace-swipe-list-point" wx:if="{{item.msgnumber>0}}">{{item.msgnumber}}</view>
+            </view>
+            <view class="grace-swipe-list-content">
+                <graceTouch bind:tapme="tapin" bind:thEnd="thEnd" bind:thMove="thMove" bind:thStart="thStart" datas="{{[index]}}">
+                    <view class="grace-swipe-list-title">
+                        <text class="grace-swipe-list-title-text" style="font-size:{{fontSizes[0]}}; color:{{fontColors[0]}};">{{item.title}}</text>
+                        <text class="grace-swipe-list-title-text" style="font-size:{{fontSizes[1]}}; color:{{fontColors[1]}}; flex-shrink:0; margin-left:25rpx; margin-right:25rpx;">{{item.time}}</text>
+                    </view>
+                    <text class="grace-swipe-list-desc" style="font-size:{{fontSizes[2]}}; color:{{fontColors[2]}}; margin-top:6rpx;">{{item.content}}</text>
+                </graceTouch>
+            </view>
+        </view>
+        <view class="grace-swipe-btns" style="width:{{(moveIndex!=index?0:x)+'px'}};">
+            <view catchtap="btnTap" class="grace-swipe-btn" data-indexs="{{[index,btnIndex]}}" style="background:{{btn.bgColor}}" wx:for="{{item.btns}}" wx:for-index="btnIndex" wx:for-item="btn" wx:key="btnIndex">
+                <text class="grace-swipe-btn-text">{{btn.name}}</text>
+            </view>
+        </view>
+    </view>
+</view>

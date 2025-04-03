@@ -1,0 +1,132 @@
+.grace-art-margin {
+    margin-top: 20rpx;
+}
+
+.grace-art-title {
+    display: block;
+    width: 100%;
+    font-size: 38rpx;
+    font-weight: bold;
+    line-height: 56rpx;
+    text-align: center;
+}
+
+.grace-skeletons {
+    background-color: #F8F8F8;
+    border-radius: 8rpx;
+    height: 60rpx;
+}
+
+.grace-skeletons-img {
+    width: 100%;
+    background-color: #F8F8F8;
+    height: 300rpx;
+    border-radius: 8rpx;
+}
+
+.grace-art-author {
+    width: 700rpx;
+    font-size: 0;
+}
+
+.grace-art-author-face {
+    width: 66rpx;
+    height: 66rpx;
+    border-radius: 66rpx;
+    margin-right: 20rpx;
+    flex-shrink: 0;
+}
+
+.grace-art-author-name {
+    display: block;
+    line-height: 80rpx;
+    font-size: 26rpx;
+}
+
+.grace-art-btn {
+    width: 120rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    font-size: 26rpx;
+    display: block;
+    flex-shrink: 0;
+    margin-left: 30rpx;
+}
+
+.grace-art-info-line {
+}
+
+.grace-art-info-line-text {
+    font-size: 22rpx;
+    line-height: 50rpx;
+    color: #888888;
+}
+
+.grace-art-contents {
+    padding: 20rpx 0;
+}
+
+.grace-art-img {
+    width: 100%;
+    margin: 10rpx 0;
+}
+
+.grace-art-content {
+    line-height: 52rpx;
+    font-size: 28rpx;
+}
+
+.grace-news-info {
+    margin-top: 20rpx;
+}
+
+.grace-news-info-text,.dc-icon-zan,.dc-icon-zan-active {
+    font-size: 30rpx;
+}
+
+.dc-icon-zan,.dc-icon-fenxiang,.dc-icon-zan-active {
+    margin-left: 30rpx;
+    color: #999999;
+}
+
+.zan {
+    width: 100%;
+    text-align: center;
+    margin: 40rpx 0;
+}
+
+.zan .dc-icon-zan,.zan .dc-icon-zan-active {
+    font-size: 88rpx;
+    margin-right: 30rpx;
+}
+
+.dc-icon-zan-active {
+    color: #0da408;
+}
+.middle-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20rpx 10rpx;
+    color: grey;
+}
+.prize{
+    width: 100rpx;
+    height: 100rpx;
+}
+.face-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.face{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    margin: 10rpx;
+    
+}

@@ -1,0 +1,28 @@
+.grace-page,.grace-body {
+  width: 750rpx;
+}
+
+
+
+
+.nav {
+  margin: 25rpx 0;
+}
+.box{
+  background-color: white;
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.time{
+  font-size: 32rpx;
+}
+.box1{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: grey;
+  padding-right: 100rpx;
+}

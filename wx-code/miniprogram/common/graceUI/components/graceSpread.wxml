@@ -1,0 +1,7 @@
+<view class="grace-spread" style="height:{{height}}; width:{{width}};">
+    <view style="padding-bottom:{{!isBtn&&isShrink?'80rpx':'0rpx'}};">
+        <slot></slot>
+    </view>
+    <view catchtap="spreadContent" class="grace-spread-btn jt-icon icon-jt-d" style="color:{{btnColor}}; font-size:{{btnTxtSize}}; z-index:{{zIndex}};" wx:if="{{isBtn}}">{{btnTxt}}</view>
+    <view catchtap="shrinkContent" class="grace-spread-btn jt-icon icon-jt-u" style="color:{{btnColor}}; font-size:{{btnTxtSize}}; z-index:{{zIndex}};" wx:if="{{!isBtn&&isShrink}}">{{shrinkBtnTxt}}</view>
+</view>

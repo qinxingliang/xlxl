@@ -1,0 +1,5 @@
+<view bindtouchend="touchend" bindtouchmove="touchmove" bindtouchstart="touchstart" class="grace-sg-slider" id="gracesgslider" style="height:{{barHeight+'rpx'}};">
+    <view class="grace-sg-slider-line" style="height:{{bglineSize+'rpx'}}; background:{{bglineColor}}; margin-top:{{(barHeight-bglineSize)/2+'rpx'}}; border-radius:{{borderRadius}};"></view>
+    <view class="grace-sg-slider-a-line" style="width:{{left+25+'px'}}; top:{{(barHeight-bglineSize)/2+'rpx'}}; background:{{bglineAColor}}; height:{{bglineSize+'rpx'}}; border-radius:{{borderRadius}};"></view>
+    <text class="grace-sg-slider-bar" style="width:{{barWidth+'rpx'}}; height:{{barHeight+'rpx'}}; line-height:{{barHeight+'rpx'}}; background:{{barBgColor}}; color:{{barColor}}; left:{{left+'px'}}; font-size:{{barTextSize}};  border-radius:{{borderRadius}}">{{barText}}</text>
+</view>

@@ -1,0 +1,77 @@
+.grace-comments {
+    padding: 10rpx 25rpx;
+}
+
+.grace-comments-at {
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #0da408;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.grace-comments-at::before {
+    padding-right: 10rpx;
+}
+
+.grace-comments-textarea {
+    width: 700rpx;
+    border-radius: 8rpx;
+    padding: 15rpx;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    height: 130rpx;
+    background-color: #F8F8F8;
+}
+
+.grace-comments-img {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 25rpx;
+    font-size: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 8rpx;
+    position: relative;
+}
+
+.grace-comments-img-in {
+    width: 160rpx;
+}
+
+.grace-comments-img-remove {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 50rpx;
+    color: #FF0036;
+}
+
+.grace-comments-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grace-comments-btns {
+    width: 96rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 44rpx;
+    color: #898989;
+    text-align: left;
+    margin-left: 25rpx;
+}
+
+.grace-comments-submit {
+    width: 180rpx!important;
+    text-align: right!important;
+    font-size: 30rpx;
+    color: #0da408;
+    margin-right: 25rpx;
+}

@@ -1,0 +1,96 @@
+.grace-swiper-card-wrap {
+    position: relative;
+}
+
+.grace-swiper-card {
+    overflow: hidden;
+}
+
+.grace-swiper-card-item {
+    box-sizing: border-box;
+    font-size: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.grace-swiper-card-nav {
+    font-size: 0;
+    display: block;
+    position: relative;
+}
+
+.grace-swiper-card-image {
+}
+
+.grace-indicator-dots {
+    width: 750rpx;
+    height: 68rpx;
+    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.grace-indicator-dots-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 20rpx;
+}
+
+.grace-indicator-dot {
+    margin: 6rpx;
+}
+
+.grace-indicator-dot-text {
+    display: block;
+    text-align: center;
+    line-height: 68rpx;
+    padding: 0 4rpx;
+    color: #FFFFFF;
+    font-size: 32rpx;
+    flex-shrink: 0;
+}
+
+.grace-indicator-dot-numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+}
+
+.grace-swiper-text {
+    width: 750rpx;
+    line-height: 68rpx;
+    padding-right: 25rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@keyframes dot-show {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dot-show {
+    animation: dot-show 300ms linear forwards;
+}

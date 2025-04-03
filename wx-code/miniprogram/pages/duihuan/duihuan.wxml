@@ -1,0 +1,40 @@
+<view class="search-wrap">
+    <view class="search-box">
+        <image src="../../images/search_defaut.png" class="search-img"></image>
+
+        <input bindinput="getValue" value="{{inputValue}}" type="text" placeholder="请输入搜索关键词" class="input-cell" />
+
+    </view>
+</view>
+<view style="background-color: #ededed;height: 1000rpx;">
+    <image src="../../images/积分专属好礼.jpg" class="top-image" mode="widthFix"></image>
+    <view class="jfsp">积分商品</view>
+    <view class="big-box">
+        <block wx:for="{{allList}}" wx:if="{{!inputValue}}">
+            <view class="box" bindtap="toDetail" data-id="{{item.cId}}">
+                <view class="kucun">库存：{{item.nStock}}</view>
+                <image src="{{item.cImgUrl}}" class="image" mode="widthFix"></image>
+                <view>{{item.cTitle}}</view>
+                <view class="jifen">积分：{{item.nJifen}}</view>
+                <view class="scj-box">
+                    <view class="scj">市场价：￥{{item.dMarketPrice}}</view>
+                    <view class="duihuan">兑换</view>
+                </view>
+            </view>
+        </block>
+
+
+        <block wx:for="{{list}}" wx:if="{{inputValue}}">
+            <view class="box" bindtap="toDetail" data-id="{{item.cId}}">
+                <view class="kucun">库存：{{item.nStock}}</view>
+                <image src="{{item.cImgUrl}}" class="image" mode="widthFix"></image>
+                <view>{{item.cTitle}}</view>
+                <view class="jifen">积分：{{item.nJifen}}</view>
+                <view class="scj-box">
+                    <view class="scj">市场价：￥{{item.dMarketPrice}}</view>
+                    <view class="duihuan">兑换</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

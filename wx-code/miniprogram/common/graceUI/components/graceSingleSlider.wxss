@@ -1,0 +1,23 @@
+.grace-sg-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.grace-sg-slider-a-line {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.grace-sg-slider-bar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    border-radius: 50rpx;
+    font-size: 20rpx;
+    text-align: center;
+    color: #323232;
+    overflow: hidden;
+}

@@ -1,0 +1,85 @@
+<!-- 顶部信息 -->
+<!-- <view><image class="topImg" src="../../images/top2.jpg"></image></view> -->
+
+<!-- 轮播图 -->
+<view class="swiper-wrap">
+
+<swiper class="swiper-box" 	indicator-dots='true'	indicator-color='#fff' 	indicator-active-color="red" autoplay>
+
+  <block wx:for="{{bannerList}}">
+    <swiper-item>
+      <image data-id="{{item.cId}}" class="swiper-img" src="{{item.cImgUrl}}"></image>
+    </swiper-item>
+  </block>
+
+</swiper>
+
+</view>
+
+<!-- 分类 -->
+<view class="type-wrap">
+
+  <navigator class="type-item" url="../sort/sort">
+    <image src="../../images/icon_sort.png" class="type-img"></image>
+    <view>分类介绍</view>
+  </navigator>
+  <navigator class="type-item" url="../ai/search">
+    <image src="../../images/search_select.png" class="type-img"></image>
+    <view>输入查询</view>
+  </navigator>
+  <view class="type-item" bindtap="paizhao">
+    <image src="../../images/icon_ai.png" class="type-img"></image>
+    <view>拍照识别</view>
+  </view>
+  <navigator class="type-item" url="../result/commit">
+    <image src="../../images/search_select.png" class="type-img"></image>
+    <view>搜索反馈</view>
+  </navigator>
+
+
+  <navigator class="type-item" bindtap="xw">
+    <image src="../../images/xw.png" class="type-img"></image>
+    <view>新闻文章</view>
+  </navigator>
+  <navigator class="type-item" bindtap="jifen">
+    <image src="../../images/jfsc.png" class="type-img"></image>
+    <view>积分商城</view>
+  </navigator>
+  <view class="type-item" bindtap="dati">
+    <image src="../../images/dati.png" class="type-img"></image>
+    <view>答题竞赛</view>
+  </view>
+  <navigator class="type-item" url="../huishou2/huishou2">
+    <image src="../../images/hs.png" class="type-img"></image>
+    <view>上门回收</view>
+  </navigator>
+</view>
+
+<!-- <view class="huishou" bindtap="huishou">回收物品</view> -->
+
+<view style="font-size: 40rpx;font-weight: 550;margin: 0rpx 0 20rpx 20rpx;">垃圾分类</view>
+<view class="choose-wrap">
+
+  <navigator url="../zhinan/detail/detail?id=0"><image class="choose-image" src="../../images/home/hui.png"></image></navigator>
+  
+  <navigator url="../zhinan/detail/detail?id=1"><image class="choose-image" src="../../images/home/chu.png"></image></navigator>
+  <navigator url="../zhinan/detail/detail?id=2"><image class="choose-image" src="../../images/home/other.png"></image></navigator>
+  <navigator url="../zhinan/detail/detail?id=3"><image class="choose-image" src="../../images/home/hai.png"></image></navigator>
+</view>
+
+<view style="font-size: 40rpx;font-weight: 550;margin: 40rpx 0 20rpx 20rpx;">科普视频</view>
+<view class="big-box">
+ <block wx:for="{{videoList}}">
+    <view class="box">
+      <video src="{{item.cUrl}}" class="video"></video>
+      <view class="video-title">{{item.cTitle}}</view>
+    </view>
+ </block>
+
+</view>
+
+
+<!-- <video style="width: 730rpx; margin: 10rpx;" src="https://6263-bcbdy-3gj5jsx126e4beb4-1300085904.tcb.qcloud.la/actionVideos/0.6274143148086808_1649517363280.mp4?sign=19caaf96cc96c3be3e20c0e6eb1026cd&t=1651337759"></video> -->
+
+
+<view style="height: 100rpx;"></view>

@@ -1,0 +1,14 @@
+/* page/four/index.wxss */
+.video{
+  position: absolute;
+  width: 100%;
+  top: 70rpx;
+  transition: all .3s;
+}
+video{
+  width: 100%;
+}
+.bg{
+  width: 100%;
+  height: calc(100% - 262rpx);
+}

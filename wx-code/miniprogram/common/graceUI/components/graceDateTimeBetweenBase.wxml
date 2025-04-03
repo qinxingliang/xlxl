@@ -1,0 +1,20 @@
+<picker-view bindchange="change" class="graceDateTime-main" value="{{defaultVal}}">
+    <picker-view-column>
+        <text class="graceDateTime-item" wx:for="{{sDate[0]}}" wx:key="index">{{item}}{{units[0]}}</text>
+    </picker-view-column>
+    <picker-view-column>
+        <text class="graceDateTime-item" wx:for="{{sDate[1]}}" wx:key="index">{{item}}{{units[1]}}</text>
+    </picker-view-column>
+    <picker-view-column>
+        <text class="graceDateTime-item" wx:for="{{sDate[2]}}" wx:key="index">{{item}}{{units[2]}}</text>
+    </picker-view-column>
+    <picker-view-column wx:if="{{isTime}}">
+        <text class="graceDateTime-item" wx:for="{{sDate[3]}}" wx:key="index">{{item}}{{units[3]}}</text>
+    </picker-view-column>
+    <picker-view-column wx:if="{{isTime}}">
+        <text class="graceDateTime-item" wx:for="{{sDate[4]}}" wx:key="index">{{item}}{{units[4]}}</text>
+    </picker-view-column>
+    <picker-view-column wx:if="{{isTime&&isSecond}}">
+        <text class="graceDateTime-item" wx:for="{{sDate[5]}}" wx:key="index">{{item}}{{units[5]}}</text>
+    </picker-view-column>
+</picker-view>

@@ -1,0 +1,7 @@
+<block wx:for="{{allList}}">
+   <view class="box" bindtap="toList" data-text="{{item.cText}}">
+     <view>{{item.cText}}</view>
+     <view>{{item.dtCreateTime}}</view>
+
+   </view>
+</block>

@@ -1,0 +1,11 @@
+var isChecked = (function(checkedIds, checkedId) {
+    for (var i = 0; i < checkedIds.length; i++) {
+        if (checkedIds[((nt_0 = (i), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))] == checkedId) {
+            return (true)
+        }
+    };
+    return (false)
+});
+module.exports = ({
+    isChecked: isChecked,
+});

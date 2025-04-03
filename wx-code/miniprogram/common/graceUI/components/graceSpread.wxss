@@ -1,0 +1,31 @@
+.grace-spread {
+    overflow: hidden;
+    position: relative;
+}
+
+.grace-spread-btn {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    background: linear-gradient(to bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.8) 25%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 100%);
+    position: absolute;
+    z-index: 999999;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.jt-icon {
+    font-family: "grace-iconfont";
+    font-style: normal;
+}
+
+.icon-jt-d::after {
+    content: "\e69d";
+    padding-left: 16rpx;
+}
+
+.icon-jt-u::after {
+    content: "\e638";
+    padding-left: 16rpx;
+}

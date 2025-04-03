@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.mapper.TSbRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="project.entity.TSbRecord">
+        <id column="c_id" property="cId" />
+        <result column="c_open_id" property="cOpenId" />
+        <result column="c_text" property="cText" />
+        <result column="dt_create_time" property="dtCreateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        c_id, c_open_id, c_text, dt_create_time
+    </sql>
+
+</mapper>

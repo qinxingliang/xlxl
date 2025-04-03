@@ -1,0 +1,52 @@
+.grace-body {
+    padding: 0;
+    background-color: #F4F4F4;
+}
+
+.big-img {
+    width: 700rpx;
+    height: 388rpx;
+    overflow: hidden;
+    margin: 15rpx 0;
+}
+
+.big-image {
+    width: 700rpx;
+    height: 388rpx;
+    border-radius: 6rpx;
+}
+
+.grace-news-list {
+    border-bottom: 1px solid #F8F8F8;
+    padding: 25rpx;
+    margin-top: 0;
+    background-color: #FFFFFF;
+    margin-bottom: 20rpx;
+}
+
+.grace-news-title {
+    font-size: 32rpx;
+}
+
+.grace-news-info-text,.dc-icon-zan,.dc-icon-zan-active {
+    font-size: 30rpx;
+}
+
+.dc-icon-zan,.dc-icon-zan-active {
+    margin-left: 20rpx;
+    color: #999999;
+}
+
+.dc-icon-zan-avtive {
+    color: #0da408;
+}
+.middle-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20rpx 0;
+    color: grey;
+}
+
+  

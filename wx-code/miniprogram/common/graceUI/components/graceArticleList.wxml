@@ -1,0 +1,34 @@
+<view class="grace-article-list">
+    <view bindtap="newstap" class="grace-article-list-item" data-articleid="{{item.id}}" wx:for="{{articles}}" wx:key="index">
+        <view style="width:100%;">
+            <text class="grace-article-list-title" style="line-height:{{titleStyle.lineHeight}}; font-size:{{titleStyle.fontSize}}; color:{{titleStyle.color}};">{{item.title}}</text>
+        </view>
+        <view class="grace-article-list-img1" wx:if="{{item.imgs.length==1}}">
+            <gImg height="{{300}}" src="{{item.imgs[0]}}" width="{{440}}"></gImg>
+        </view>
+        <view class="grace-article-list-more-imgs" wx:if="{{item.imgs.length==2}}">
+            <view class="grace-article-list-img2-in">
+                <gImg height="{{200}}" src="{{item.imgs[0]}}" width="{{335}}"></gImg>
+            </view>
+            <view class="grace-article-list-img2-in">
+                <gImg height="{{200}}" src="{{item.imgs[1]}}" width="{{335}}"></gImg>
+            </view>
+        </view>
+        <view class="grace-article-list-more-imgs" wx:if="{{item.imgs.length>=3}}">
+            <view class="grace-article-list-img3-in">
+                <gImg height="{{150}}" src="{{item.imgs[0]}}" width="{{220}}"></gImg>
+            </view>
+            <view class="grace-article-list-img3-in">
+                <gImg height="{{150}}" src="{{item.imgs[1]}}" width="{{220}}"></gImg>
+            </view>
+            <view class="grace-article-list-img3-in">
+                <gImg height="{{150}}" src="{{item.imgs[2]}}" width="{{220}}"></gImg>
+            </view>
+        </view>
+        <view class="grace-article-list-footer">
+            <text class="grace-article-list-footer-items grace-icons icon-write"> {{item.author}}</text>
+            <text class="grace-article-list-footer-items grace-icons icon-eye grace-text-center"> {{item.views}}</text>
+            <text class="grace-article-list-footer-items grace-icons icon-zan grace-text-right"> {{item.createTime}}</text>
+        </view>
+    </view>
+</view>

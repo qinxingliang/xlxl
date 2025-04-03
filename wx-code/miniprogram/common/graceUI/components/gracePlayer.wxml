@@ -1,0 +1,29 @@
+<view class="grace-player">
+    <view class="grace-player-title" style="color:{{color}};">{{list[index].title}}</view>
+    <view class="grace-player-poster">
+        <image class="grace-player-poster-img {{playStatus==1?'grace-playing':''}}" mode="aspectFill" src="{{list[index].coverImgUrl}}"></image>
+    </view>
+    <view style="padding:25rpx;">
+        <graceSingleSlider barBgColor="#FFFFFF" barColor="#323232" barText="{{playTime}}" barWidth="{{100}}" bglineAColor="#FFFFFF" bglineColor="rgba(255,255,255,0.5)" bind:change="progressChange" id="graceSingleSlider"></graceSingleSlider>
+    </view>
+    <view class="grace-player-console">
+        <view bindtap="changeType" class="grace-player-tool">
+            <text class="grace-player-tool graceplayer-icons gplayericon-while" wx:if="{{dotype==1}}"></text>
+            <text class="grace-player-tool graceplayer-icons gplayericon-one" style="font-size:40rpx;" wx:if="{{dotype==2}}"></text>
+        </view>
+        <view class="grace-player-console-c">
+            <text bindtap="prev" class="grace-player-tool graceplayer-icons gplayericon-prev"></text>
+            <text bindtap="pause" class="grace-player-tool graceplayer-icons gplayericon-pasue" style="font-size:66rpx;" wx:if="{{playStatus==1}}"></text>
+            <text bindtap="playi" class="grace-player-tool graceplayer-icons gplayericon-play" style="font-size:66rpx;" wx:if="{{playStatus==2}}"></text>
+            <text bindtap="next" class="grace-player-tool graceplayer-icons gplayericon-next"></text>
+        </view>
+        <text bindtap="openList" class="grace-player-tool graceplayer-icons gplayericon-list"></text>
+    </view>
+    <view catchtap="hideList" catchtouchmove="stopfun" class="grace-shade" style="left:{{listShow?'0':'-2000px'}};">
+        <scroll-view class="graceplayer-list" scrollY="true" style="background:{{listBg}}; height:{{listHeight}};">
+            <view class="graceplayer-list-item">歌曲列表</view>
+            <view bindtap="playList" class="graceplayer-list-item {{index==idx?'graceplayer-list-item-this':''}}" data-index="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">{{item.title}}<text class="graceplayer-list-item-singer"> - {{item.singer}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

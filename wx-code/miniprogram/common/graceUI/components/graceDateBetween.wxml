@@ -1,0 +1,20 @@
+<view>
+    <view class="gui-date-bt-block" style="background:{{weexBg}};">
+        <text class="gui-date-bt-item gui-date-bt-week">一</text>
+        <text class="gui-date-bt-item gui-date-bt-week">二</text>
+        <text class="gui-date-bt-item gui-date-bt-week">三</text>
+        <text class="gui-date-bt-item gui-date-bt-week">四</text>
+        <text class="gui-date-bt-item gui-date-bt-week">五</text>
+        <text class="gui-date-bt-item gui-date-bt-week">六</text>
+        <text class="gui-date-bt-item gui-date-bt-week">日</text>
+    </view>
+    <view wx:for="{{daysData}}" wx:for-index="daysIndex" wx:for-item="days" wx:key="daysIndex">
+        <view class="gui-date-bt-month-w">
+            <view class="gui-date-bt-month" style="background:{{startBg}}">{{days[0][0]}}{{unit[0]}}{{days[0][1]}}{{unit[1]}}</view>
+        </view>
+        <view class="gui-date-bt-block">
+            <text catchtap="selectDay" class="gui-date-bt-item gui-date-bt-days" data-dt="{{item[0]==''?'':days[0][0]+''+days[0][1]+''+item[0]}}" style="background:{{item[1]?sedBg:itemBg}}; color:{{item[1]?sedColor:color}}" wx:for="{{days[1]}}" wx:key="index">{{item[0]}}<text class="gui-date-bt-start" style="background:{{sedDays[1]==days[0][0]+''+days[0][1]+''+item[0]?endBg:startBg}}" wx:if="{{sedDays[0]==days[0][0]+''+days[0][1]+''+item[0]||sedDays[1]==days[0][0]+''+days[0][1]+''+item[0]}}">{{item[0]}}</text>
+            </text>
+        </view>
+    </view>
+</view>

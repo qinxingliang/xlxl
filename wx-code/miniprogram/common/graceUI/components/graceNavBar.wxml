@@ -1,0 +1,8 @@
+<scroll-view scrollWithAnimation class="grace-nav-bar {{isCenter?'grace-nav-center':''}}" scrollIntoView="{{'tab-'+currentIndex+autoLeft}}" scrollX="{{true}}">
+    <view bindtap="navchang" class="nav-item" data-index="{{index}}" id="{{'tab-'+index}}" style="width:{{size<1?'auto':size+'rpx'}}; margin-right:{{margin+'rpx'}}; padding:0rpx {{padding}};" wx:for="{{items}}" wx:key="index">
+        <view class="nav-item-title" style="color:{{currentIndex==index?activeColor:color}}; text-align : {{textAlign}}; line-height:{{lineHeight}}; font-size:{{currentIndex==index?activeFontSize:fontSize}}; font-weight:{{currentIndex==index?activeFontWeight:'400'}};">{{item}}</view>
+        <view class="nav-active-line-wrap" style="justify-content:{{activeDirection}};">
+            <view class="nav-active-line {{currentIndex==index&&animatie?'grace-nav-scale':''}}" style="background:{{activeLineBg}}; width:{{activeLineWidth}}; height:{{activeLineHeight}}; border-radius:{{activeLineRadius}}" wx:if="{{currentIndex==index}}"></view>
+        </view>
+    </view>
+</scroll-view>

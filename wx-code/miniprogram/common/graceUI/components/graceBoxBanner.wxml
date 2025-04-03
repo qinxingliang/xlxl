@@ -1,0 +1,11 @@
+<view class="grace-box-banner" style="background:{{background}}; padding-top:{{padding}}; padding-bottom:{{padding}}; border-radius:{{borderRadius}};">
+    <view catchtap="taped" class="grace-box-items" data-index="{{index}}" style="border-right:{{index+1>=items.length?'0rpx':border[0]+' '+border[1]+' '+border[2]}};" wx:for="{{items}}" wx:key="index">
+        <view class="grace-box-banner-line" style="line-height:{{lineHeight}};">
+            <text class="grace-box-banner-line-text1" style="color:{{color[0]}}; font-size:{{fontSize[0]}};">{{item[0]}}</text>
+            <text class="grace-box-banner-line-text2" style="color:{{color[1]}}; font-size:{{fontSize[1]}};">{{item[1]}}</text>
+        </view>
+        <view class="grace-box-banner-line" style="padding-bottom:3px">
+            <text style="color:{{color[2]}}; font-size:{{fontSize[2]}};">{{item[2]}}</text>
+        </view>
+    </view>
+</view>

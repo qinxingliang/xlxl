@@ -1,0 +1,23 @@
+<view class="grace-swiper-card-wrap">
+    <swiper autoplay="{{autoplay}}" bindchange="swiperchange" circular="{{true}}" class="grace-swiper-card" current="{{currentIndex}}" indicatorDots="{{false}}" interval="{{interval}}" nextMargin="{{spacing+'rpx'}}" previousMargin="{{spacing+'rpx'}}" style="width:{{width+'rpx'}}; height:{{heightIn+'rpx'}};">
+        <swiper-item class="grace-swiper-card-item" wx:for="{{swiperItems}}" wx:key="index">
+            <navigator class="grace-swiper-card-nav" hoverClass="none" openType="{{item.opentype}}" style="padding-left:{{current!=index?padding+'rpx':'0rpx'}}; padding-right:{{current!=index?padding+'rpx':'0rpx'}}; padding-top:{{current!=index?paddingY+'rpx':'0rpx'}}; padding-bottom:{{current!=index?paddingY+'rpx':'0rpx'}}; transition:all 0.2s ease-in 0s;" url="{{item.url}}" wx:if="{{item.opentype!='click'}}">
+                <image class="grace-swiper-card-image" src="{{item.img}}" style="border-radius:{{borderRadius}}; width:{{current!=index?widthInSamll+'rpx':widthIn+'rpx'}}; height:{{current!=index?heightInSmall+'rpx':heightIn+'rpx'}}; opacity:{{current!=index?opacity:1}}; transition:all 0.2s ease-in 0s;"></image>
+            </navigator>
+            <view catchtap="taped" class="grace-swiper-card-nav" data-index="{{index}}" style="padding-left:{{current!=index?padding+'rpx':'0rpx'}}; padding-right:{{current!=index?padding+'rpx':'0rpx'}}; padding-top:{{current!=index?paddingY+'rpx':'0rpx'}}; padding-bottom:{{current!=index?paddingY+'rpx':'0rpx'}}; transition:all 0.2s ease-in 0s;" wx:if="{{item.opentype=='click'}}">
+                <image class="grace-swiper-card-image" src="{{item.img}}" style="border-radius:{{borderRadius}}; width:{{current!=index?widthInSamll+'rpx':widthIn+'rpx'}}; height:{{current!=index?heightInSmall+'rpx':heightIn+'rpx'}}; opacity:{{current!=index?opacity:1}}; transition:all 0.2s ease-in 0s;"></image>
+            </view>
+            <view class="grace-indicator-dot-numbers" style="height:{{indicatorBarHeight+'rpx'}}; background:{{indicatorBarBgColor}}; width:{{current!=index?widthInSamll+'rpx':widthIn+'rpx'}}; left:{{current!=index?padding+'rpx':'0rpx'}}; bottom:{{current!=index?paddingY+'rpx':'0rpx'}};" wx:if="{{indicatorType=='number'}}">
+                <text class="grace-indicator-dot-text" style="padding-left:20rpx; font-style:italic; color:{{titleColor}};">{{index+1}}</text>
+                <text class="grace-indicator-dot-text" style="font-size:36rpx; color:{{titleColor}};">/</text>
+                <text class="grace-indicator-dot-text" style="font-size:28rpx; padding-right:20rpx; font-style:italic;  color:{{titleColor}};">{{swiperItems.length}}</text>
+                <text class="grace-swiper-text" style="color:{{titleColor}}; font-size:{{titleSize}}; height:{{indicatorBarHeight+'rpx'}}; line-height:{{indicatorBarHeight+'rpx'}};">{{item.title}}</text>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="grace-indicator-dots" style="width:{{width+'rpx'}}; height:{{indicatorBarHeight+'rpx'}}; padding-left:{{spacing+'rpx'}}; padding-right:{{spacing+'rpx'}}; position:{{indicatorPosition}}; justify-content:{{indicatorDirection}};" wx:if="{{indicatorType=='dot'}}">
+        <view class="grace-indicator-dots-wrap">
+            <view class="grace-indicator-dot {{current==index?'dot-show':''}}" style="width:{{current!=index?indicatorWidth+'rpx':indicatorActiveWidth+'rpx'}}; height:{{indicatorHeight+'rpx'}}; border-radius:{{indicatorRadius+'rpx'}}; background:{{current!=index?indicatorColor:indicatorActiveColor}};" wx:for="{{swiperItems}}" wx:key="index"></view>
+        </view>
+    </view>
+</view>

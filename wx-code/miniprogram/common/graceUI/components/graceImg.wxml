@@ -1,0 +1,4 @@
+<view class="grace-img" style="width:{{width+'rpx'}}; height:{{height<1?imgHeight+'rpx':height+'rpx'}};">
+    <image bindload="imgLoad" mode="widthFix" src="{{src}}" style="width:{{width+'rpx'}}; height:{{imgHeight+'rpx'}}; border-radius:{{borderRadius}}; opacity:{{opacity}};"></image>
+    <text class="grace-img-loading grace-icons icon-image {{animate?'grace-shade-out':''}}" style="width:{{width+'rpx'}}; height:{{height<1?imgHeight+'rpx':height+'rpx'}}; line-height:{{height<1?imgHeight+'rpx':height+'rpx'}}; border-radius:{{borderRadius}};" wx:if="{{isLoading}}"></text>
+</view>
