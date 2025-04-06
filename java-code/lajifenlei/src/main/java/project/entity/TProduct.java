@@ -14,8 +14,6 @@ import lombok.experimental.Accessors;
  * 垃圾类型管理 product
  * </p>
  *
- * @author YJR
- * @since 2023-09-15
  */
 @Getter
 @Setter

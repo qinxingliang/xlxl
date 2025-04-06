@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author YJR
- * @since 2023-09-13
  */
 @Service
 public class TInfoServiceImpl extends ServiceImpl<TInfoMapper, TInfo> implements TInfoService {

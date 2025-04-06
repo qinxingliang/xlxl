@@ -17,12 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import java.io.InputStream;
 
-/**
- * @author : YJR
- * @className : FileController
- * @description : [描述说明该类的功能]
- * @createTime : 2023/6/24 19:10
- */
+
 @Slf4j
 @Controller
 @RequestMapping("/api/file")

@@ -1,0 +1,32 @@
+<map 
+  id="map" 
+  scale="5" 
+  style='height:{{windowHeight}}px' 
+  markers="{{stores}}" 
+  subkey="{{mapSubKey}}" 
+  show-compass="{{true}}"
+   bindmarkertap="onMarkerTap"
+   show-location
+   show-scale>
+   <!-- 上方的添加提醒 -->
+
+    <!-- 管理入口 -->
+    <!-- <cover-view class="cover">
+      <button 
+        class='button' 
+        bindtap='add' lang='zh_CN'>管理</button>
+    </cover-view> -->
+    <!-- 搜索按钮 -->
+    <cover-view class="cover" bindtap="showSearch">
+      搜索
+    </cover-view>
+
+    <cover-view class="cover-1" bindtap="setTitleNull">
+      T
+    </cover-view>
+
+    <!-- 查看全部 -->
+    <!-- <cover-view class="button show_all" bindtap="viewAll" bindlongpress='showAdmin'>列表</cover-view> -->
+    <input type="text" placeholder="请输入关键字" class="search" wx:if="{{search}}" bindinput="getSearchValue"/>
+
+</map>

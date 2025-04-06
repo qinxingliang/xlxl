@@ -1,6 +1,6 @@
 package project.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import project.entity.TDianzan;
 import project.mapper.TDianzanMapper;
 import project.service.TDianzanService;
@@ -15,8 +15,6 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Service
 public class TDianzanServiceImpl extends ServiceImpl<TDianzanMapper, TDianzan> implements TDianzanService {

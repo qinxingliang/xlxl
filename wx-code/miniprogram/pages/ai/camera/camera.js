@@ -6,10 +6,11 @@ Page({
     data: {
         accessToken: "",
         isShow: false,
-        results: [],
+        result: {},
         src: "",
         isCamera: true,
-        btnTxt: "拍照"
+        btnTxt: "拍照",
+        typeName:["可回收垃圾","有害垃圾","厨余（湿）垃圾","其他（干）垃圾","未知结果"]
     },
     onLoad() {
         this.ctx = wx.createCameraContext()
@@ -52,9 +53,12 @@ Page({
                 wx.getFileSystemManager().readFile({
                     filePath: res.tempImagePath,
                     encoding: "base64",
-                    success: res => {
-                        console.log(res)
-                        that.req(that.data.accessToken, res.data)
+                    success: base64Res => {
+                        // const imageType = res.tempImagePath.split('.').pop(); 
+                        // // 获取文件扩展名（如 png/jpg）
+                        // const base64Data = `data:image/${imageType};base64,${base64Res.data}`;
+                        // console.info(base64Data)
+                        that.req(base64Res.data)
                     },
                     fail: res => {
                         wx.hideLoading()
@@ -67,27 +71,42 @@ Page({
             }
         })
     },
-    req: function (token, image) {
+    req: function (image) {
+    //  console.info("1")
+   //   console.info(image)
+    /*  image=image.replace(/\+/g, '%2B')  // 替换所有 +
+                  .replace(/\//g, '%2F')  // 替换所有 /（注意转义符号）
+                  .replace(/=/g, '%3D');  // 替换所有 =*/
+     // console.info("2")
+    //  console.info(image)
         var that = this
-        http.req("https://aip.baidubce.com/rest/2.0/image-classify/v2/advanced_general?access_token=" + token, {
-            "image": image
-        }, function (res) {
+        wx.request({
+          url: app.globalData.baseUrl + 'api/wx/v1/getFenLei',
+          method: "POST",
+          data:{
+            image:image
+          },
+          header:{
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+          },
+          success(res) {
             wx.hideLoading()
             console.log(JSON.stringify(res))
-            var code = res.data.err_code
-            if (code == 111 || code == 100 || code == 110) {
+            var code = res.statusCode
+            if (code == 401 || code == 403 ) {
                 wx.clearStorageSync("access_token")
                 wx.clearStorageSync("time")
                 that.accessTokenFunc()
                 return
             }
-            var num = res.result_num
-            var results = res.data.result
+            const results = res.data.data.list
+            // console.info(results[0])
             if (results != undefined && results != null) {
                 that.setData({
                     isShow: true,
-                    results: results
+                    result: results[0]
                 })
+                console.info(that.data.result);
             } else {
                 wx.clearStorageSync("access_token")
                 wx.showToast({
@@ -95,8 +114,9 @@ Page({
                     title: 'AI识别失败,请重新尝试',
                 })
             }
-        }, "POST")
-    },
+        }
+    })
+  },
     // 获取accessToken
      accessTokenFunc: async function () {
         var that = this
@@ -104,7 +124,6 @@ Page({
             wx.request({
                 url: app.globalData.baseUrl + 'api/wx/v1/getAccessToken',
                 method: "POST",
-                data: {},
                 success(res){
                     that.data.accessToken = res.data.access_token
                     wx.setStorageSync("access_token", res.result.data.access_token)
@@ -162,18 +181,31 @@ Page({
             count: 1,
             sizeType: ['original', 'compressed'],
             sourceType: ['album', 'camera'],
-            success(ress) {
+            success: (ress) => {
 
                 console.log(ress)
                 console.log(ress.tempFilePaths)
-
+                this.setData({
+                  src: ress.tempFilePaths[0],
+                  isCamera: false,
+                  btnTxt: "拍照"
+                })
+                wx.showLoading({
+                    title: '正在加载中',
+                })
                 wx.getFileSystemManager().readFile({
                     filePath: ress.tempFilePaths[0],
                     encoding: "base64",
                     success: res => {
-                        that.req(that.data.accessToken, res.data)
+                        that.req(res.data)
                     },
-
+                    fail: (err) => {
+                      wx.showToast({
+                        title: '读取照片失败',
+                        icon: 'none'
+                      });
+                      console.error('读取照片错误:', err);
+                    }
                 })
 
             }

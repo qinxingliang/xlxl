@@ -13,8 +13,6 @@ import lombok.experimental.Accessors;
  * 收藏表
  * </p>
  *
- * @author YJR
- * @since 2023-07-07
  */
 @Getter
 @Setter

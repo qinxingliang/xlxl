@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  *  Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-07-02
  */
 @Mapper
 public interface TWxUserMapper extends BaseMapper<TWxUser> {

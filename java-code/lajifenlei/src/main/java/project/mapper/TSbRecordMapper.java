@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 识别记录 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2024-03-09
  */
 @Mapper
 public interface TSbRecordMapper extends BaseMapper<TSbRecord> {

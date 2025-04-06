@@ -8,8 +8,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author YJR
- * @since 2023-06-27
  */
 public interface TLbtService extends IService<TLbt> {
 

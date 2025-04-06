@@ -20,7 +20,7 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -187,5 +187,5 @@
     "ignore": [],
     "include": []
   },
-  "appid": "wxfe20e1886344ba4b"
+  "appid": "wxaef64a2c2670f60b"
 }

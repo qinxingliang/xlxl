@@ -13,8 +13,6 @@ import lombok.experimental.Accessors;
  * 歌手表
  * </p>
  *
- * @author YJR
- * @since 2023-08-31
  */
 @Getter
 @Setter

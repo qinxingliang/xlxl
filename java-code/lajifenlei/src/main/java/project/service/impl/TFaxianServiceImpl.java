@@ -13,9 +13,6 @@ import java.util.List;
  * <p>
  * 发现表 服务实现类
  * </p>
- *
- * @author YJR
- * @since 2023-09-14
  */
 @Service
 public class TFaxianServiceImpl extends ServiceImpl<TFaxianMapper, TFaxian> implements TFaxianService {

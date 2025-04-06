@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-06-06
  */
 @Service
 public class TUserServiceImpl extends ServiceImpl<TUserMapper, TUser> implements TUserService {

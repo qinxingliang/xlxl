@@ -5,10 +5,8 @@ import project.entity.TUser;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author : YJR
  * @className : RequestUtil
  * @description : [描述说明该类的功能]
- * @createTime : 2023/6/10 13:17
  */
 public class RequestUtil {
     /**

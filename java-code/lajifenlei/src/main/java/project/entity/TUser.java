@@ -15,8 +15,6 @@ import lombok.experimental.Accessors;
  * 
  * </p>
  *
- * @author YJR
- * @since 2023-06-06
  */
 @Data
 @Accessors(chain = true)

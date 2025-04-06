@@ -7,6 +7,11 @@ Page({
     data: {
 
     },
+    biaozhu(){
+      wx.navigateTo({
+        url: '/pages/zhinan/add/add',
+      })
+    },
     feedback() {
         wx.navigateTo({
             url: '/pages/me/feedback/feedback',

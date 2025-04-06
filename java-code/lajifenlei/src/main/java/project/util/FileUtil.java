@@ -23,10 +23,8 @@ import java.util.concurrent.Executors;
 
 
 /**
- * @author : YJR
  * @className : FileUtil
  * @description : [描述说明该类的功能]
- * @createTime : 2023/6/24 19:14
  */
 @Component
 public class FileUtil {

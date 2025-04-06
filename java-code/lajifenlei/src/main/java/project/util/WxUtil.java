@@ -19,10 +19,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author : YJR
  * @className : WxUtil
  * @description : 微信工具类
- * @createTime : 2023/6/27 19:11
  */
 @Component
 @Slf4j

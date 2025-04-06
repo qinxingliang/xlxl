@@ -14,8 +14,6 @@ import lombok.experimental.Accessors;
  * 识别记录
  * </p>
  *
- * @author YJR
- * @since 2024-03-09
  */
 @Getter
 @Setter

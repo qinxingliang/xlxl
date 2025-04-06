@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  * 识别记录 服务实现类
  * </p>
  *
- * @author YJR
- * @since 2024-03-09
  */
 @Service
 public class TSbRecordServiceImpl extends ServiceImpl<TSbRecordMapper, TSbRecord> implements TSbRecordService {

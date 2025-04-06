@@ -37,22 +37,26 @@
   </navigator>
 
 
-  <navigator class="type-item" bindtap="xw">
+  <!-- <navigator class="type-item" bindtap="xw">
     <image src="../../images/xw.png" class="type-img"></image>
     <view>新闻文章</view>
+  </navigator> -->
+  <navigator class="type-item" bindtap="map">
+    <image src="../../images/xw.png" class="type-img"></image>
+    <view>投放点</view>
   </navigator>
-  <navigator class="type-item" bindtap="jifen">
+  <!-- <navigator class="type-item" bindtap="jifen">
     <image src="../../images/jfsc.png" class="type-img"></image>
     <view>积分商城</view>
-  </navigator>
-  <view class="type-item" bindtap="dati">
+  </navigator> -->
+  <!-- <view class="type-item" bindtap="dati">
     <image src="../../images/dati.png" class="type-img"></image>
     <view>答题竞赛</view>
-  </view>
-  <navigator class="type-item" url="../huishou2/huishou2">
+  </view> -->
+  <!-- <navigator class="type-item" url="../huishou2/huishou2">
     <image src="../../images/hs.png" class="type-img"></image>
     <view>上门回收</view>
-  </navigator>
+  </navigator> -->
 </view>
 
 <!-- <view class="huishou" bindtap="huishou">回收物品</view> -->

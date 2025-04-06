@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  * 考试记录 服务实现类
  * </p>
- *
- * @author YJR
- * @since 2023-09-14
  */
 @Service
 public class TExamRecordServiceImpl extends ServiceImpl<TExamRecordMapper, TExamRecord> implements TExamRecordService {

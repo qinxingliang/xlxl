@@ -1,0 +1,11 @@
+<view class="title">{{spot.title}}</view>
+
+<view  class="addreess-location" bindtap="opendLocation">地址：{{spot.address}}</view>
+
+<!-- <audio class="audio-class" poster="" author="" name="{{spot.title}}" controls="true"  src="{{spot.audioUrl}}"></audio> -->
+
+<view class="intro">简介：{{spot.notes}}</view>
+
+<block wx:for="{{spot.images}}">
+  <image class="img" src="{{item}}"></image>
+</block>

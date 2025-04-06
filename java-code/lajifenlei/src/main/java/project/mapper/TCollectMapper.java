@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 收藏表 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-07-07
  */
 @Mapper
 public interface TCollectMapper extends BaseMapper<TCollect> {

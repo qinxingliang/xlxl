@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  * 签到表 服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-09-13
  */
 @Service
 public class TQiandaoServiceImpl extends ServiceImpl<TQiandaoMapper, TQiandao> implements TQiandaoService {

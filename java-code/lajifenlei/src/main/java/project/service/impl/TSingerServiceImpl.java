@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  * 歌手表 服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-08-31
  */
 @Service
 public class TSingerServiceImpl extends ServiceImpl<TSingerMapper, TSinger> implements TSingerService {

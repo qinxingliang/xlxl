@@ -19,9 +19,7 @@ import java.util.List;
  * <p>
  * 收藏表 前端控制器
  * </p>
- *
- * @author YJR
- * @since 2023-07-07
+
  */
 @RestController
 @RequestMapping("/api/sp/v1")

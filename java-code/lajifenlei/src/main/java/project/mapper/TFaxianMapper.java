@@ -11,8 +11,6 @@ import java.util.List;
  * 发现表 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Mapper
 public interface TFaxianMapper extends BaseMapper<TFaxian> {

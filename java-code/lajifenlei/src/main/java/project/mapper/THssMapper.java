@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 回收商表 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Mapper
 public interface THssMapper extends BaseMapper<THss> {

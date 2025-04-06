@@ -3,6 +3,11 @@ Page({
     data: {
 
     },
+    map(){
+      wx.navigateTo({
+        url: '/pages/zhinan/map/map',
+      })
+    },
     dati() {
         wx.switchTab({
             url: '/pages/kaoshi/kaoshi',

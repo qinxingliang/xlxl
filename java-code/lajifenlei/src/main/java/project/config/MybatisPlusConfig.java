@@ -8,12 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author : YJR
- * @className : MybatisPlusConfig
- * @description : MyBatis分页插件
- * @createTime : 2023/6/26 20:56
- */
+
 @Configuration
 public class MybatisPlusConfig {
     /**

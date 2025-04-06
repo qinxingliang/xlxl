@@ -1,6 +1,7 @@
 package project.controller;
 
-import com.alibaba.fastjson.JSONObject;
+
+import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,8 +21,7 @@ import java.util.List;
  * 前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
+
  */
 @RestController
 @RequestMapping("/api/dianzan/v1")

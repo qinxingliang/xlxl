@@ -30,11 +30,11 @@
   <view wx:if="{{userInfo!=null}}">
     <view style="display: flex;flex-direction: row;">
 
-      <view class="box" bindtap="toSbRecord">
+      <!-- <view class="box" bindtap="toSbRecord">
         <image src="../../images/tt1.png" class="image"></image>
         <view class="title">识别记录</view>
 
-      </view>
+      </view> -->
 
       <view class="box" bindtap="toHistory">
         <image src="/images/tt3.png" class="image"></image>
@@ -82,7 +82,11 @@
 
     </view>
     <view style="display: flex;flex-direction: row;">
+      <view class="box" bindtap="biaozhu">
+        <image src="../../images/tt11.png" class="image"></image>
+        <view class="title">添加标注</view>
 
+      </view>
       <view class="box" bindtap="loginOut">
         <image src="../../images/tt11.png" class="image"></image>
         <view class="title">退出登录</view>

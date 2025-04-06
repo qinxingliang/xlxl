@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  * 视频表 服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Service
 public class TVideoServiceImpl extends ServiceImpl<TVideoMapper, TVideo> implements TVideoService {

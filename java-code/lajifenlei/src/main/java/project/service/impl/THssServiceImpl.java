@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  * 回收商表 服务实现类
  * </p>
- *
- * @author YJR
- * @since 2023-09-14
  */
 @Service
 public class THssServiceImpl extends ServiceImpl<THssMapper, THss> implements THssService {

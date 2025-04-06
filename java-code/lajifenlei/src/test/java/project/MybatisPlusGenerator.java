@@ -16,11 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * @Description
- * @Author YJR
- * @Date 2022/8/8 15:13
- */
 @Slf4j
 public class MybatisPlusGenerator {
 

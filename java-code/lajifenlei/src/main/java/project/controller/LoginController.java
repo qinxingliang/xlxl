@@ -15,10 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- * @author YJR
- * @since 2023-06-06
- */
+
 @RestController
 @RequestMapping("/api/v1")
 //@CrossOrigin(originPatterns = "*",allowCredentials = "true")

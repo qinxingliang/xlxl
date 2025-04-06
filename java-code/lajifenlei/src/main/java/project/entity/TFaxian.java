@@ -1,6 +1,6 @@
 package project.entity;
 
-import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson2.JSONArray;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -17,8 +17,6 @@ import lombok.experimental.Accessors;
  * 发现表
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Getter
 @Setter

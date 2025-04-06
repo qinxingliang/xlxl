@@ -23,8 +23,7 @@ import java.util.List;
  * 考试表 前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
+
  */
 @RestController
 @Slf4j

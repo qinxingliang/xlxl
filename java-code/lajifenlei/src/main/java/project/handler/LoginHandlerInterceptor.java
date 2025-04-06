@@ -12,10 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author : YJR
  * @className : LoginHandlerInterceptor
  * @description : 登录拦截器
- * @createTime : 2023/6/6 23:17
  */
 @Component
 public class LoginHandlerInterceptor implements HandlerInterceptor {

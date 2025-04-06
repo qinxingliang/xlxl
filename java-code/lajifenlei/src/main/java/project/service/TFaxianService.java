@@ -10,8 +10,6 @@ import java.util.List;
  * 发现表 服务类
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 public interface TFaxianService extends IService<TFaxian> {
     /**

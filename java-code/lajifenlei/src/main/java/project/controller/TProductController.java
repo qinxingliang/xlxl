@@ -23,8 +23,7 @@ import java.util.List;
  * 垃圾类型管理 product 前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-09-15
+
  */
 @RestController
 @RequestMapping("/api/product/v1")

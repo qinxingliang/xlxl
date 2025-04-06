@@ -11,10 +11,8 @@ import java.security.Key;
 import java.util.Date;
 
 /**
- * @author : YJR
  * @className : JwtUtils
  * @description : 权限验证工具类
- * @createTime : 2023/6/6 23:35
  */
 @Slf4j
 public class JwtUtils {

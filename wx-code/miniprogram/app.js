@@ -6,7 +6,9 @@ App({
         baseUrl: 'http://127.0.0.1:8080/'
     },
     onLaunch: function () {
-
+      wx.cloud.init({
+        env:'cloud1-0gxgpmzo06901b21'
+      })
         // this.onGetOpenid()
         // this.getUserinfo()
 

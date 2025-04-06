@@ -13,8 +13,6 @@ import lombok.experimental.Accessors;
  * 回收商表
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Getter
 @Setter

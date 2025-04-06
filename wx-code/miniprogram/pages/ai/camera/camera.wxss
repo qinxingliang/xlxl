@@ -2,7 +2,8 @@
   width: 100%;
   height: 200rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 100rpx;
   justify-content: center;
   align-items: center;
 }
@@ -13,7 +14,52 @@
   background-color: #00cc77;
   color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+/* 添加模态框基础样式 */
+.cu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 将center改为flex-start */
+  padding-top: 100rpx; /* 添加顶部间距 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.cu-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 调整表格容器样式 */
+.table-container {
+  width: 90%;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+}
+
+.table-row {
+  display: flex;
+  padding: 15rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.cell {
+  flex: 1;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx; /* 从28rpx增大 */
+  padding: 25rpx 0;/* 增加行高*/
 }

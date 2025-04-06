@@ -23,8 +23,7 @@ import javax.annotation.Resource;
  * 歌手表 前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-08-31
+
  */
 @RestController
 @Slf4j

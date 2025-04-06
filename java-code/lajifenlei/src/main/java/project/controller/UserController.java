@@ -17,10 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
- * @author : YJR
  * @className : UserController
  * @description : [描述说明该类的功能]
- * @createTime : 2023/6/9 23:39
  */
 @RestController
 @RequestMapping(value = "/api/user/v1")

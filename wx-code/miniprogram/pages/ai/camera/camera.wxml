@@ -6,23 +6,28 @@
 
 <view class='photo-view'>
  <view class='takePhoto' bindtap="takePhoto">{{btnTxt}}</view>
+ <view class='takePhoto' bindtap="chooseImage">从相册选择</view>
 </view>
 
-<view class='photo-view'>
- <view class='takePhoto' bindtap="chooseImage">从图库选择</view>
-</view>
 
 <view class="cu-modal {{isShow?'show':''}}" bindtap="hideModal">
-  <view class="cu-dialog" catchtap>
-    <radio-group class="block" bindchange="radioChange">
-      <view class="cu-list menu text-left">
-        <view class="cu-item" wx:for="{{results}}" wx:key="index">
-          <label class="flex justify-between align-center flex-sub">
-            <view class="flex-sub">{{item.keyword}}</view>
-            <radio class="round" value="{{item.keyword}}"></radio>
-          </label>
-        </view>
-      </view>
-    </radio-group>
+  <view class="table-container">
+  <!-- 表格内容 -->
+  <view class="table-row" >
+    <view class="cell">可信度</view>
+    <view class="cell">{{result["trust"]}}</view>
   </view>
+  <view class="table-row" >
+    <view class="cell">垃圾分类</view>
+    <view class="cell">{{typeName[result["lajitype"]]}}</view>
+  </view>
+  <view class="table-row" >
+    <view class="cell">物品名称</view>
+    <view class="cell">{{result["name"]}}</view>
+  </view>
+  <view class="table-row" >
+    <view class="cell">提示</view>
+    <view class="cell">{{result["lajitip"]}}</view>
+  </view>
+</view>
 </view>

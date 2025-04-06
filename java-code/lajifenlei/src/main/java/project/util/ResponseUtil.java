@@ -4,10 +4,8 @@ import com.alibaba.fastjson2.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author : YJR
  * @className : ResponseUtil
  * @description : 返回结果集
- * @createTime : 2023/6/8 22:21
  */
 public class ResponseUtil {
     // 成功code

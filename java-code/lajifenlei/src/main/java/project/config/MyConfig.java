@@ -8,12 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.annotation.Resource;
 
-/**
- * @author : YJR
- * @className : MyMvcConfig
- * @description : 拦截器配置
- * @createTime : 2023/6/6 23:50
- */
+
 @Configuration
 public class MyConfig implements WebMvcConfigurer {
 

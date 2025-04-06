@@ -12,9 +12,6 @@ import javax.annotation.Resource;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author YJR
- * @since 2023-06-27
  */
 @Service
 public class TLbtServiceImpl extends ServiceImpl<TLbtMapper, TLbt> implements TLbtService {

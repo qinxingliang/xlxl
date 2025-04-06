@@ -1,5 +1,7 @@
 package project.controller;
 
+
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -15,17 +17,21 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import com.baidubce.http.ApiExplorerClient;
+import com.baidubce.http.AppSigner;
+import com.baidubce.http.HttpMethodName;
+import com.baidubce.model.ApiExplorerRequest;
+import com.baidubce.model.ApiExplorerResponse;
 
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
- * @author : YJR
  * @className : WxController
  * @description : [描述说明该类的功能]
- * @createTime : 2023/6/27 19:44
  */
 @RestController
 @Slf4j
@@ -36,6 +42,12 @@ public class WxController {
 
     @Value("${baidu.secret-key}")
     private String secretKey;
+
+    @Value("${baidu.access-key}")
+    private String accessKey;
+
+    @Value("${baidu.app-secret}")
+    private String appSecret;
 
     @Resource
     private WxUtil wxUtil;
@@ -161,6 +173,49 @@ public class WxController {
             return object;
         } catch (IOException e) {
             log.error("获取百度云key出现异常",e);
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "getFenLei", method = RequestMethod.POST)
+    public JSONObject getFenLei(@RequestBody String image)
+    {
+       // log.info("图片Base64：{}",image);
+//        if (image.length()==0) { log.info("1");return null;}
+//        else log.info("照片大小：{}",image.length());
+//        return null;
+        /*log.info("传输过来的image：{}",imageJson);
+        JSONObject json = (JSONObject) JSON.parse(imageJson);
+        String image = json.getString("image");*/
+
+        //log.info(image);
+        String path = "http://znsb2ljfl.api.bdymkt.com/image/waste-sorting/execute";
+        ApiExplorerRequest request = new ApiExplorerRequest(HttpMethodName.POST, path);
+        request.setCredentials(accessKey, appSecret);
+
+        // 设置header参数
+        request.addHeaderParameter("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+
+
+       /* String convertImage = image.replace("+", "%2B")
+                                    .replace("/", "%2F")
+                                    .replace("=", "%3D");
+        log.info("转换后的base64编码:{}",convertImage);*/
+        // 设置jsonBody参数
+//        String jsonBody = "image=".concat(image);
+//        log.info("添加image=后的：{}",jsonBody);
+        request.setJsonBody(image);
+//        String result = "{\"data\":{\"list\":[{\"trust\":0.751592,\"lajitype\":4,\"name\":\"钓竿\",\"lajitip\":\"钓竿的垃圾分类系统暂时无法判别，请重新尝试拍摄物体的主要特征。\"},{\"trust\":0.590628,\"lajitype\":4,\"name\":\"铁撬棍\",\"lajitip\":\"铁撬棍的垃圾分类系统暂时无法判别，请重新尝试拍摄物体的主要特征。\"},{\"trust\":0.432636,\"lajitype\":4,\"name\":\"数学图形\",\"lajitip\":\"数学图形的垃圾分类系统暂时无法判别，请重新尝试拍摄物体的主要特征。\"},{\"trust\":0.272688,\"lajitype\":4,\"name\":\"脱钩器\",\"lajitip\":\"脱钩器的垃圾分类系统暂时无法判别，请重新尝试拍摄物体的主要特征。\"},{\"trust\":0.115347,\"lajitype\":4,\"name\":\"简笔画\",\"lajitip\":\"简笔画的垃圾分类系统暂时无法判别，请重新尝试拍摄物体的主要特征。\"}]},\"msg\":\"成功\",\"success\":true,\"code\":200,\"taskNo\":\"458335925204572499446478\"}";
+//        return (JSONObject) JSON.parse(result);
+        ApiExplorerClient client = new ApiExplorerClient(new AppSigner());
+
+        try {
+            ApiExplorerResponse response = client.sendRequest(request);
+            // 返回结果格式为Json字符串
+            log.info("分类识别结果:{}",response.getResult());
+            return (JSONObject) JSON.parse(response.getResult());
+        } catch (Exception e) {
+            log.error("照片过大或其他原因",e);
         }
         return null;
     }

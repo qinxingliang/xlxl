@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 歌手表 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-08-31
  */
 @Mapper
 public interface TSingerMapper extends BaseMapper<TSinger> {

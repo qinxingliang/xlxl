@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-09-15
  */
 @Service
 public class TSpServiceImpl extends ServiceImpl<TSpMapper, TSp> implements TSpService {

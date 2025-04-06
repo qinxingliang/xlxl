@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-07-02
  */
 @Service
 public class TWxUserServiceImpl extends ServiceImpl<TWxUserMapper, TWxUser> implements TWxUserService {

@@ -14,8 +14,6 @@ import lombok.experimental.Accessors;
  * 考试表
  * </p>
  *
- * @author YJR
- * @since 2023-09-14
  */
 @Getter
 @Setter

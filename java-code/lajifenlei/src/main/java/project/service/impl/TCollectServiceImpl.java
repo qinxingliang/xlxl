@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
  * 收藏表 服务实现类
  * </p>
  *
- * @author YJR
- * @since 2023-07-07
  */
 @Service
 public class TCollectServiceImpl extends ServiceImpl<TCollectMapper, TCollect> implements TCollectService {

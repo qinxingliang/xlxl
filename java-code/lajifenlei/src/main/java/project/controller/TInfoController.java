@@ -18,8 +18,7 @@ import java.util.List;
  * 前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-09-13
+
  */
 @RestController
 @RequestMapping("/api/info/v1")

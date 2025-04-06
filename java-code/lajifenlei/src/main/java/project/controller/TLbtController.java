@@ -22,8 +22,7 @@ import java.util.List;
  *  轮播图前端控制器
  * </p>
  *
- * @author YJR
- * @since 2023-06-27
+
  */
 @RestController
 @RequestMapping("/api/lbt/v1")

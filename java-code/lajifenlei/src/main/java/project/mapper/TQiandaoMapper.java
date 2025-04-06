@@ -9,8 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * 签到表 Mapper 接口
  * </p>
  *
- * @author YJR
- * @since 2023-09-13
  */
 @Mapper
 public interface TQiandaoMapper extends BaseMapper<TQiandao> {

@@ -8,8 +8,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author YJR
- * @since 2023-07-02
  */
 public interface TWxUserService extends IService<TWxUser> {
 

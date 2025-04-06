@@ -6,9 +6,9 @@ spring:
       max-file-size: 150MB
       max-request-size: 150MB
   datasource:
-    url: jdbc:mysql://git.qiufengluoyue.cn:3306/lajifenlei?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true
+    url: jdbc:mysql://127.0.0.1:3306/lajifenlei?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true
     username: root
-    password: jiarui19971224.
+    password: 123456
 
 
 mybatis-plus:
@@ -18,13 +18,14 @@ mybatis-plus:
   configuration:
     #标准输出，即打印到控制台
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-handlers-package: com.alibaba.fastjson2.support.spring
 
 #云存储相关配置
 cos:
-  secret-id: AKIDyTko21AKejZCZngY7VeeQxMgohMpNHaH
-  secret-key: vfAQVWNAnEQQGvPisoX7UhiW6cv0pSt8
+  secret-id: AKIDpdHygFaicJn3FE0Zu1vc8VlqiNxLVSDk
+  secret-key: PaopcCbmjTzKRL2YrwoSu9Ayb1DCxXt2
   #存储桶名称
-  name: cos-1256088358
+  name: cos-1352695728
   #存储桶地域
   region: ap-beijing
 
@@ -32,11 +33,14 @@ cos:
 wx:
   base-url: https://api.weixin.qq.com/
   # AppID(小程序ID)
-  app-id: wxfe20e1886344ba4b
+  app-id: wxaef64a2c2670f60b
   # AppSecret(小程序密钥)
-  app-secret: 48d24d439086964a461eacc0b7cef278
+  app-secret: 33596293d010ac8bcf0fcd46469287f1
 
 # 百度云相关
 baidu:
-  api-key: wo6Cxj5Rnb5KBzNTwuw6fNzP
-  secret-key: hLLQp9Ydz1iSNESM7B9Yu1GSz0kvozjN
+  api-key: wSAUqyXhcpiFPg4b9pLwXIAb
+  secret-key: Utdwrc21Rv5XUtqFwgrPyt0A4kCvQ1w5
+  access-key: 46b2d5ebec1e4deb95817636a93f208c
+  app-secret: 9a27266ea3854f4399fbb46d9a1c7b3d
+  app-code: 5086d7295b6e40a88c71d3b98ac21665
