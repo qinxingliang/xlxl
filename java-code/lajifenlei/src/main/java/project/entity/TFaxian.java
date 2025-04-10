@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
+import com.baomidou.mybatisplus.extension.handlers.Fastjson2TypeHandler;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -56,7 +56,7 @@ public class TFaxian implements Serializable {
     /**
      * 预览图片
      */
-    @TableField(value = "c_yulan_list",typeHandler = FastjsonTypeHandler.class)
+    @TableField(value = "c_yulan_list",typeHandler = Fastjson2TypeHandler.class)
     private JSONArray cYulanList;
 
     /**

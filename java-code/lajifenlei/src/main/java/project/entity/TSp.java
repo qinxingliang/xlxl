@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
+import com.baomidou.mybatisplus.extension.handlers.Fastjson2TypeHandler;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -46,13 +46,13 @@ public class TSp implements Serializable {
     /**
      * 顶部轮播图
      */
-    @TableField(value = "c_imgs",typeHandler = FastjsonTypeHandler.class)
+    @TableField(value = "c_imgs",typeHandler = Fastjson2TypeHandler.class)
     private JSONArray cImgs;
 
     /**
      * 商品详情图片
      */
-    @TableField(value = "c_img_list",typeHandler = FastjsonTypeHandler.class)
+    @TableField(value = "c_img_list",typeHandler = Fastjson2TypeHandler.class)
     private JSONArray cImgList;
 
     /**

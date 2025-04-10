@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import project.entity.TExamRecord;
 import project.entity.TJifenRecord;
+import project.entity.TQiandao;
 import project.service.TExamRecordService;
 import project.util.UUIDUtil;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 /**
@@ -38,14 +41,14 @@ public class TExamRecordController {
             examRecord.setcId(UUIDUtil.getUUID());
             examRecord.setDtCreateTime(LocalDateTime.now());
         }
-        if(examRecord.getnSocre() != null && examRecord.getnSocre() >= 100){
+        if(examRecord.getnSocre() != null && examRecord.getnSocre() >= 0){
             // 更新积分
             TJifenRecord record = new TJifenRecord();
             // 补全参数
-            record.setnJifen(100);
+            record.setnJifen(examRecord.getnSocre());
             record.setnType((byte)0);
             record.setcOpenId(examRecord.getcOpenId());
-            record.setcBgName("考试送积分");
+            record.setcBgName("答题送积分");
             record.setDtCreateTime(LocalDateTime.now());
             jifenRecordController.addorRemoveReacord(record);
         }
@@ -66,7 +69,14 @@ public class TExamRecordController {
         else{
             wrapper.lambda().orderByDesc(TExamRecord::getDtCreateTime);
         }
-
+        String isToday = param.getString("isToday");
+        if(StringUtils.isNotBlank(isToday)){
+            // 查询今天数据
+            LocalDateTime start = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
+            LocalDateTime end = LocalDateTime.of(LocalDate.now(), LocalTime.MAX);
+            wrapper.lambda().ge(TExamRecord::getDtCreateTime,start);
+            wrapper.lambda().le(TExamRecord::getDtCreateTime,end);
+        }
         return examRecordService.list(wrapper);
     }
 }

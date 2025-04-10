@@ -1,3 +1,3 @@
-<view class="title">垃圾分类</view>
+<view class="title">关于我们</view>
     <rich-text nodes="{{info.cGywm}}" style="margin:20rpx;"></rich-text>
 <image src="{{info.cImage}}" style="width: 100%;" mode="widthFix" bindtap="previewImg"></image>

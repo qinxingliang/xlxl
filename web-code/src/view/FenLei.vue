@@ -47,7 +47,7 @@
                 </el-form-item>
 
                 <el-form-item label="物品分类" prop="nSortId" >
-                    <el-select v-model="form.nSortId" placeholder="问题答案" :clearable="true" style="width: 100%;">
+                    <el-select v-model="form.nSortId" placeholder="请选择物品分类" :clearable="true" style="width: 100%;">
                         <template v-for="(item,index) in type">
                             <el-option :label="item.label" :value="item.value"></el-option>
                         </template>

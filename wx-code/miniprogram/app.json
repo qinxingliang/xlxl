@@ -66,6 +66,7 @@
   "useExtendedLib": {
     "weui": true
   },
+  "requiredBackgroundModes": ["fetch"],
   "tabBar": {
     "color": "#999",
     "selectedColor": "#0da408",
@@ -80,19 +81,19 @@
       },
       {
         "pagePath": "pages/faxian/faxian",
-        "text": "发现",
+        "text": "新闻文章",
         "iconPath": "images/fx.png",
         "selectedIconPath": "images/fx-selected.png"
       },
       {
         "pagePath": "pages/duihuan/duihuan",
-        "text": "兑换",
+        "text": "积分商城",
         "iconPath": "images/shop.png",
         "selectedIconPath": "images/shop-selected.png"
       },
       {
         "pagePath": "pages/kaoshi/kaoshi",
-        "text": "考试",
+        "text": "答题",
         "iconPath": "images/ks.png",
         "selectedIconPath": "images/ks-selected.png"
       },

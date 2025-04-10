@@ -7,7 +7,7 @@
     </view>
 </view>
 <view style="background-color: #ededed;height: 1000rpx;">
-    <image src="../../images/积分专属好礼.jpg" class="top-image" mode="widthFix"></image>
+    <image src="../../images/积分换好礼.jpg" class="top-image" mode="widthFix"></image>
     <view class="jfsp">积分商品</view>
     <view class="big-box">
         <block wx:for="{{allList}}" wx:if="{{!inputValue}}">

@@ -185,6 +185,7 @@ Page({
             userInfo: null
         })
         wx.removeStorageSync('userInfo')
+       // console.log("退出登录用户信息",this.userInfo,wx.getUserInfo(),app.globalData.userInfo);
     },
 
     tobiaobai() {

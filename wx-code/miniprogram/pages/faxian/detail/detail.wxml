@@ -8,7 +8,8 @@
             <view>{{zanCount}}点赞</view>
             <view>{{util.formatDate(article.dtCreateTime)}}</view>
         </view>
-        <view style="margin: 20rpx;" bindtap="previewImg">
+        <!-- <view style="margin: 20rpx;" bindtap="previewImg"> -->
+          <view style="margin: 20rpx;">
             <rich-text nodes="{{article.cContent}}" ></rich-text>
         </view>
 

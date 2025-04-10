@@ -93,12 +93,12 @@
                     <el-form-item label="库存" prop="nStock">
                         <el-input-number :controls="false" style="width: 100%;" :precision="0" v-model="form.nStock" placeholder="请输入库存"></el-input-number>
                     </el-form-item>
-                    <el-form-item label="地址经度" prop="cLongitude">
+                    <!-- <el-form-item label="地址经度" prop="cLongitude">
                         <el-input v-model="form.cLongitude" placeholder="请输入地址经度" clearable></el-input>
                     </el-form-item>
                     <el-form-item label="地址纬度" prop="cLatitude">
                         <el-input v-model="form.cLatitude" placeholder="请输入地址纬度" clearable></el-input>
-                    </el-form-item>
+                    </el-form-item> -->
                 </el-form>
             </el-scrollbar>
             <div slot="footer" class="dialog-footer">
@@ -292,20 +292,20 @@ export default {
                         trigger: 'blur'
                     }
                 ],
-                cLongitude: [
-                    {
-                        required: true,
-                        message: '请输入商兑换地址经度',
-                        trigger: 'blur'
-                    }
-                ],
-                cLatitude: [
-                    {
-                        required: true,
-                        message: '请输入商兑换地址纬度',
-                        trigger: 'blur'
-                    }
-                ],
+                // cLongitude: [
+                //     {
+                //         required: true,
+                //         message: '请输入商兑换地址经度',
+                //         trigger: 'blur'
+                //     }
+                // ],
+                // cLatitude: [
+                //     {
+                //         required: true,
+                //         message: '请输入商兑换地址纬度',
+                //         trigger: 'blur'
+                //     }
+                // ],
             },
             // 页数
             current: 1,
@@ -332,7 +332,7 @@ export default {
                     // 当前页数
                     current: this.current,
                     // 分类名称
-                    flmc: this.selectQuery.name
+                    name: this.selectQuery.name
                 }
             })
                 .then(res => {

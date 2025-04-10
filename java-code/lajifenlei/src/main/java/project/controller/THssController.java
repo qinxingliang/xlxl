@@ -58,7 +58,8 @@ public class THssController {
      */
     @RequestMapping(value="/del",method = RequestMethod.POST)
     public JSONObject del(@RequestBody JSONObject param) {
-        String id = param.getString("id");
+      //  log.info("删除回收商信息：{}",param);
+        String id = param.getString("cId");
         return ResponseUtil.getSuccessResponseBody(hssService.removeById(id));
     }
     /**

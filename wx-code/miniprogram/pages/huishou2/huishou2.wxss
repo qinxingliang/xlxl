@@ -1,6 +1,6 @@
 .wrap {
     margin: 20rpx;
-    border: 1rpx solid orange;
+    border: 1rpx solid rgb(105, 74, 16);
     padding: 20rpx;
   }
   .wrap view {
@@ -10,12 +10,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color:rgb(151, 151, 151);
+    color:rgb(41, 11, 11);
   }
   .but {
-    border: 1rpx solid orange;
-    color: #FF6146;
+    border: 1rpx solid rgb(32, 32, 16);
+    color: #141211;
   }
   .address {
-    color: rgb(151, 151, 151);
+    color: rgb(32, 14, 14);
   }

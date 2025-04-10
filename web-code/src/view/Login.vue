@@ -1,10 +1,10 @@
 <template>
-    <div style="background-image: url('/static/img/background.jpg');background-size: cover;">
+    <div style="background-image: url('/static/img/background.jpg');background-size: cover; position: relative;" >
         <div class="center" v-loading="loading" element-loading-text="登录中" element-loading-spinner="el-icon-loading"
             element-loading-background="rgba(0, 0, 0, 0.8)">
             <el-form ref="form" :model="form" :rules="rules" class="login-container" label-position="top" label-width="80px"
-                @submit.native.prevent>
-                <h3 class="login">系统登录</h3>
+                @submit.native.prevent style="position: absolute; top: 20px; right: 20px;">
+                <h3 class="login">智能垃圾分类后台管理系统登录</h3>
                 <el-form-item label="用户" prop="userName">
                     <el-input v-model="form.userName" placeholder="请输入用户名" clearable></el-input>
                 </el-form-item>

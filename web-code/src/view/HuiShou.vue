@@ -181,7 +181,7 @@ export default {
                 cWx: [
                     {
                         required: true,
-                        message: '回收商微信',
+                        message: '请输入回收商微信',
                         trigger: 'blur'
                     }
 
@@ -258,7 +258,7 @@ export default {
             var loding = loadingInstance(null, '提交中');
             // 发起请求
             this.$axios({
-                url: 'api/spfl/v1/del',
+                url: 'api/hss/v1/del',
                 data: param
             })
                 .then(res => {

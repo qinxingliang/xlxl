@@ -147,7 +147,7 @@ export default {
             if (this.form.cUrl != null && this.form.cUrl != '') {
                 return callback();
             } else {
-                return callback(new Error('请上传图片'));
+                return callback(new Error('请上传视频'));
 
             }
         };
@@ -178,7 +178,7 @@ export default {
                 cTitle: [
                     {
                         required: true,
-                        message: '请输视频标题',
+                        message: '请输入视频标题',
                         trigger: 'blur'
                     }
 
@@ -279,7 +279,7 @@ export default {
             let formData = new FormData();
             formData.append('file', param.file)
             // 开启遮罩
-            var loding = loadingInstance('this', '图片上传中');
+            var loding = loadingInstance('this', '视频上传中');
             this.$axios({
                 url: this.uploadUrl,
                 method: 'POST',

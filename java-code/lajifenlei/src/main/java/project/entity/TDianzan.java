@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
+import com.baomidou.mybatisplus.extension.handlers.Fastjson2TypeHandler;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -38,7 +38,7 @@ public class TDianzan implements Serializable {
     /**
      * 用户信息
      */
-    @TableField(value = "c_user_info",typeHandler = FastjsonTypeHandler.class)
+    @TableField(value = "c_user_info",typeHandler = Fastjson2TypeHandler.class)
     private JSONObject cUserInfo;
 
     /**

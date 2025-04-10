@@ -2,8 +2,8 @@
     <div style="height: calc(100% - 40px)">
         <div class="select-form">
             <el-form :inline="true" :model="selectQuery" class="demo-form-inline" @submit.native.prevent>
-                <el-form-item label="发现内容标题" class="select-form-item">
-                    <el-input v-model="selectQuery.name" placeholder="发现内容标题" :clearable="true"></el-input>
+                <el-form-item label="新闻文章标题" class="select-form-item">
+                    <el-input v-model="selectQuery.name" placeholder="新闻文章标题" :clearable="true"></el-input>
                 </el-form-item>
                 <el-form-item class="select-form-item">
                     <el-button type="primary" @click="select" native-type="submit">查询</el-button>
@@ -17,9 +17,9 @@
             <div style="height:100%; max-height:842px;">
                 <el-table :border="true" :data="tableData" :stripe="true" height="100%" class="table"
                     :row-style="{ height: '80px' }" empty-text="暂无数据" :show-overflow-tooltip="true">
-                    <el-table-column prop="cTitle" label="发现标题" min-width="10%" align="center">
+                    <el-table-column prop="cTitle" label="新闻文章标题" min-width="10%" align="center">
                     </el-table-column>
-                    <el-table-column label="发现内容图片" min-width="20%" align="center">
+                    <el-table-column label="封面图" min-width="20%" align="center">
                         <template v-slot="slot">
                             <el-image style="height: 80px" :src="slot.row.cImgUrl" :preview-src-list="[slot.row.cImgUrl]"
                                 :preview-teleported="true" />
@@ -27,7 +27,7 @@
                     </el-table-column>
                     <el-table-column prop="nLll" label="浏览量" min-width="10%" align="center"></el-table-column>
 
-                    <el-table-column prop="cContent" label="发现内容" min-width="40%" align="center"></el-table-column>
+                    <el-table-column prop="cContent" label="文章内容" min-width="40%" align="center"></el-table-column>
 
                     <el-table-column label="操作" min-width="20%" align="center">
                         <template v-slot="slot">
@@ -42,12 +42,12 @@
         </div>
 
         <!-- 弹出层 新建发现内容或者是发现内容修改-->
-        <el-dialog :title="isAdd ? '添加发现内容' : '修改发现内容'" v-model="showDialog" class="dialog-faxian"
+        <el-dialog :title="isAdd ? '添加新闻文章内容' : '修改新闻文章内容'" v-model="showDialog" class="dialog-faxian"
             :close-on-press-escape="false" :destroy-on-close="true" :close-on-click-modal="false">
             <el-scrollbar max-height="540px">
                 <el-form :model="form" :rules="rules" ref="form" label-position="top">
-                    <el-form-item label="发现标题" prop="cTitle">
-                        <el-input v-model="form.cTitle" placeholder="请输入发现内容标题" clearable></el-input>
+                    <el-form-item label="新闻文章标题" prop="cTitle">
+                        <el-input v-model="form.cTitle" placeholder="请输入新闻文章标题" clearable></el-input>
                     </el-form-item>
 
                     <el-form-item label="封面图" prop="cImgUrl">
@@ -66,7 +66,7 @@
                         </div>
                     </el-form-item>
 
-                    <el-form-item label="预览图片">
+                    <!-- <el-form-item label="预览图片">
                         <el-upload v-model:file-list="form.cYulanList" class="upload-demo" drag action="" multiple
                             :http-request="(param) => uploadImg(param, true)" accept="image/*" style="width: 100%;">
                             <el-icon class="el-icon--upload"><upload-filled /></el-icon>
@@ -74,7 +74,7 @@
                                 拖拽文件或者 <em>点击上传</em>
                             </div>
                         </el-upload>
-                    </el-form-item>
+                    </el-form-item> -->
                 </el-form>
             </el-scrollbar>
             <div slot="footer" class="dialog-footer">
@@ -152,7 +152,7 @@ import { Plus } from '@element-plus/icons-vue'
 import globalConfig from '../config'
 import { loadingInstance } from '../utils/util';
 import TEditor from '@/components/TEditor.vue';
-
+// import 'tinymce/skins/ui/oxide/skin.css';
 
 
 export default {
@@ -204,14 +204,14 @@ export default {
                 cTitle: [
                     {
                         required: true,
-                        message: '请输发现内容标题',
+                        message: '请输入新闻文章标题',
                         trigger: 'blur'
                     }
                 ],
                 cContent: [
                     {
                         required: true,
-                        message: '请输发现内容标题',
+                        message: '请输入新闻文章内容',
                         trigger: 'blur'
                     }
 

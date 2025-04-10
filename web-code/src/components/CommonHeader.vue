@@ -42,7 +42,7 @@
         <el-dialog title="修改头像" v-model="changeIconModel" class="dialog-pass" open="clearFields"
             :close-on-click-modal="false">
             <el-form :model="iconForm"  ref="iconForm" label-position="top">
-                <el-form-item label="轮播图图片" prop="cImgUrl">
+                <el-form-item label="更新后的头像" prop="cImgUrl">
                     <el-upload class="avatar-uploader" action="" :show-file-list="false" :http-request="uploadImg"
                         accept="image/*">
                         <img v-if="iconForm.cImgUrl" :src="iconForm.cImgUrl" class="avatar" />
@@ -89,7 +89,7 @@
 
 .header {
     height: 100%;
-    background-color: #333
+    background-color: #006400
 }
 
 .user {

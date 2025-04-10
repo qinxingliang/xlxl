@@ -22,10 +22,11 @@ Page({
         this.addOne();
     },
     async getUser() {
-        var user = await app.getUserInfo();
+        var user = app.globalData.userInfo
         this.setData({
             user
         })
+        console.log("用户信息",user)
     },
     getData() {
         var that = this;
@@ -95,10 +96,22 @@ Page({
         })
     },
     zan2() {
-        wx.showToast({
-            title: '你已经点赞过了',
-            icon: 'none'
-        })
+      var that = this
+      wx.request({
+        url: app.globalData.baseUrl + 'api/dianzan/v1/wx/del',
+        method: "POST",
+        data: {
+            openId: app.globalData.openid,
+            faxianId: this.data.id
+        },
+        success(res) {
+            wx.showToast({
+                title: '取消点赞',
+            })
+            that.getData();
+            that.getZan();
+        }
+    })
     },
     getZan(){
         var that = this
@@ -114,12 +127,14 @@ Page({
                 var faces = [];
                 var zan = false;
                 data.forEach(item => {
+                   if (that.data.user != null)
                     if(item.cOpenId == that.data.user.cOpenid){
                         zan = true;
                     }
                     
                     faces.push(item.cUserInfo.cIcon);
                 });
+                console.log("是否已经点赞",zan);
                 that.setData({
                     zanCount,
                     faces,

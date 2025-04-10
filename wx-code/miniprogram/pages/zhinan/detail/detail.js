@@ -117,16 +117,22 @@ Page({
             url: app.globalData.baseUrl + 'api/product/v1/wx/getAll',
             method: "POST",
             data: {
-                cName: that.data.inputValue
+                cName: that.data.inputValue,
+                nSortId: that.data.currentData.idx + 1
             },
             success(res) {
                 that.setData({
                     allList: res.data.data
                 })
+                wx.showToast({
+                  title: '搜索完成',
+                  icon: 'none'
+              })
             },
             complete() {
                 wx.hideLoading()
             }
+             
         })
 
       

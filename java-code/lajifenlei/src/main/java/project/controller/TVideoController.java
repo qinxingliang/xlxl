@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import project.entity.TLbt;
 import project.entity.TVideo;
 import project.entity.TVideo;
 import project.service.TVideoService;
@@ -81,7 +82,9 @@ public class TVideoController {
         }
 
         QueryWrapper<TVideo> wrapper = new QueryWrapper<>();
-
+        if(StringUtils.isNotBlank(flmc)){
+            wrapper.lambda().like(TVideo::getcTitle,flmc);
+        }
         // 获取查询返回结果
         Page<TVideo> pageSelect = videoService.page(page, wrapper);
         JSONObject object = new JSONObject();

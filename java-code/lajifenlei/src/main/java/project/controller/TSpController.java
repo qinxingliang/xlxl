@@ -71,7 +71,8 @@ public class TSpController {
      */
     @RequestMapping(value="/del",method = RequestMethod.POST)
     public JSONObject del(@RequestBody JSONObject param) {
-        String id = param.getString("id");
+      //  log.info("删除商品信息:{}",param);
+        String id = param.getString("cId");
         return ResponseUtil.getSuccessResponseBody(spService.removeById(id));
     }
 
@@ -110,7 +111,7 @@ public class TSpController {
         // 商品减少库存
         UpdateWrapper<TSp> spUpdateWrapper = new UpdateWrapper<>();
         spUpdateWrapper.lambda().eq(TSp::getcId,cId);
-        spUpdateWrapper.setSql(" n_stock = n_stock - 1 ");
+        spUpdateWrapper.setSql(" n_stock = n_stock - 1 , n_yishou = n_yishou + 1");
         spService.update(spUpdateWrapper);
         sp = spService.getById(cId);
         if(sp.getnStock() < 0){

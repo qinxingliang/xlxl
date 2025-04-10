@@ -1,7 +1,7 @@
 <template>
   <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse"
-    :default-active="activerouter" background-color="#545c64" text-color="#fff" :router="true">
-    <h3>后台管理</h3>
+    :default-active="activerouter" background-color="#006400" text-color="#fff" :router="true">
+    <h3>智能垃圾分类系统后台管理</h3>
 
     <template v-for="item in menuData">
       <template v-if="item.children">
@@ -63,7 +63,7 @@ export default {
         {
           path: '/shangpin',
           name: 'shangpin',
-          lable: '商品管理',
+          lable: '积分商品管理',
           icon: '',
           url: '/shangpin'
         },
@@ -77,14 +77,14 @@ export default {
         {
           path: '/wenti',
           name: 'wenti',
-          lable: '问题管理',
+          lable: '答题问题管理',
           icon: '',
           url: '/wenti'
         },
         {
           path: '/faxian',
           name: 'faxian',
-          lable: '发现管理',
+          lable: '新闻文章管理',
           icon: '',
           url: '/faxian'
         },
@@ -135,7 +135,7 @@ export default {
         {
           path: '/user',
           name: 'user',
-          lable: '用户管理',
+          lable: '微信用户管理',
           icon: '',
           url: '/user'
         },

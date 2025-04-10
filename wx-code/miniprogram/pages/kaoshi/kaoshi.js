@@ -16,7 +16,7 @@ Page({
         status: 0,
         answerList: ["可回收物", "有害垃圾", "厨余垃圾", "其他垃圾"]
     },
-    onLoad() {
+    onShow() {
         if (app.globalData.userInfo == null) {
             wx.switchTab({
                 url: '../../pages/me/me',
@@ -31,8 +31,50 @@ Page({
             return
         }
         this.getUser()
+        wx.request({
+          url: app.globalData.baseUrl + 'api/exam/record/v1/wx/get',
+          method: "POST",
+          data:{
+            cOpenId: app.globalData.openid,
+            isToday: "1"
+          },
+          success(res) {
+            console.log("查看res",res);
+              if (res.data.length > 0) {
+                wx.switchTab({
+                  url: '../../pages/zhinan/zhinan',
+                        success() {
+                      wx.showToast({
+                          title: '你今天已经答过题了',
+                          icon: 'none'
+                      })
+                    }
+              
+
+            })
+                return
+              } 
+          }
+      })
         this.getRandom()
+
     },
+    // onShow()
+    // {
+    //   if (app.globalData.userInfo == null) {
+    //     wx.switchTab({
+    //         url: '../../pages/me/me',
+    //         success() {
+    //             wx.showToast({
+    //                 title: '请先登录',
+    //                 icon: 'none'
+    //             })
+
+    //         }
+    //     })
+    //     return
+    //     }
+    // },
     async getUser() {
         var user = await app.getUserInfo();
         this.setData({
@@ -151,6 +193,7 @@ Page({
     },
 
     add() {
+      // console.log("添加考试记录");
         var that = this;
         wx.request({
           url: app.globalData.baseUrl + 'api/exam/record/v1/wx/add',

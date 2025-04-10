@@ -94,9 +94,9 @@ public class TFaxianController {
 
     @RequestMapping(value = "/del",method = RequestMethod.POST)
     public JSONObject del(@RequestBody TFaxian tLbt){
-        TFaxian tSpflNew = new TFaxian();
-        tSpflNew.setcId(tLbt.getcId());
-        faxianService.updateById(tSpflNew);
+//        TFaxian tSpflNew = new TFaxian();
+//        tSpflNew.setcId(tLbt.getcId());
+        faxianService.removeById(tLbt.getcId());
         return ResponseUtil.getSuccessResponseBody(null);
     }
 

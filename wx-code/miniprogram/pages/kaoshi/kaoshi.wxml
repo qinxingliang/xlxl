@@ -25,7 +25,7 @@
 </block>
 <block wx:if="{{status==1}}">
 
-    <view class="status2-title1">获得<text class="num1">{{score}}</text>分</view>
+    <view class="status2-title1">得分：<text class="num1">{{score}}</text>分</view>
 
 
     <view class="status2-title2">
@@ -41,7 +41,7 @@
 
     </view>
     <view class="status2-box2">
-        <view class="status2-box2-but1" bindtap="che">再测一次</view>
+        <!-- <view class="status2-box2-but1" bindtap="che">再测一次</view> -->
         <view class="status2-box2-but2" bindtap="chakan">查看答案</view>
 
 

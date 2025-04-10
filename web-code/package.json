@@ -15,7 +15,7 @@
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "element-plus": "^2.3.7",
-    "tinymce": "^5.5.1",
+    "tinymce": "^5.10.9",
     "vue": "^3.2.13",
     "vue-froala-wysiwyg": "^2.9.0",
     "vue-router": "^4.2.2"

@@ -32,6 +32,7 @@ Page({
     getData() {
         // 获取详情
         var that = this
+       // console.log("该商品id:{}",this.data.id)
         wx.request({
             url: app.globalData.baseUrl + 'api/sp/v1/wx/selectById',
             method: "POST",
@@ -42,6 +43,7 @@ Page({
                 that.setData({
                     product: res.data
                 })
+           //     console.log("获得详细商品信息:{}",res.data)
             }
         })
     },

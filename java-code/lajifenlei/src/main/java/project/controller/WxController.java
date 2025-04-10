@@ -148,7 +148,7 @@ public class WxController {
         QueryWrapper<TWxUser> wrapper = new QueryWrapper<TWxUser>();
 
         if (StringUtils.isNotBlank(userId)) {
-            wrapper.lambda().eq(TWxUser::getcOpenid, userId);
+            wrapper.lambda().like(TWxUser::getcOpenid, userId);
         }
         if (StringUtils.isNotBlank(nickName)) {
             wrapper.lambda().like(TWxUser::getcNickName, nickName);
